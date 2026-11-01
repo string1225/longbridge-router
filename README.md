@@ -58,6 +58,8 @@ python skills/longbridge-router/scripts/client.py quotes 600519.SH 700.HK AAPL.U
 
 ## 开发与测试
 
+两类股票策略研究、独立候选池、只读采集与每日报告见 [research/README.md](research/README.md)。原始行情和研究凭证保存在仓库外。
+
 Python 3.11+，创建 venv 后：
 
 ```sh

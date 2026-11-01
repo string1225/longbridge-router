@@ -1,0 +1,1517 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-01 Asia/Shanghai",
+  "scope": "Dividend research evidence only. No broker orders, credentials, operational API calls or performance claims.",
+  "source_retrieved_date": "2026-11-01",
+  "universe": {
+    "listing_count": 18,
+    "issuer_count": 16,
+    "pool": "ordinary_dividend_research_candidates",
+    "approval": "none_are_automatically_approved",
+    "independence": "This dividend pool uses unadjusted price plus ordinary sustainable DPS and coverage. The separate volatile-price pool must not use dividend yield, payout quality or membership here as entry/exit inputs. Shared accounting may record dividends, but they do not enter volatile-price signals.",
+    "duplicate_exposure": [
+      [
+        "1398.HK",
+        "601398.SH"
+      ],
+      [
+        "939.HK",
+        "601939.SH"
+      ]
+    ]
+  },
+  "data_status": {
+    "primary_evidence_gathered": true,
+    "complete_point_in_time_history": false,
+    "dividend_strategy_backtest_run": false,
+    "dividend_strategy_profit_claim": false,
+    "coverage_approval_completed": false,
+    "unknown_values": "null means not verified; never substitute zero or infer ex-date from record-date.",
+    "statement_status": "Proposed/declared/scheduled/paid are distinct. Past scheduled dates are not silently promoted to paid."
+  },
+  "sources": {
+    "cm25": {
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032600468.pdf",
+      "kind": "issuer_exchange_filing",
+      "read": "full_text"
+    },
+    "cm26": {
+      "url": "https://english.sse.com.cn/news/newsrelease/voice/c/c_20260817_10829136.shtml",
+      "kind": "exchange_news_relay",
+      "read": "primary_indexed_extract",
+      "limit": "Confirms RMB2.51 interim; not the original HK cash distribution form."
+    },
+    "ct": {
+      "url": "https://www.chinatelecom-h.com/en/ir/dividend.php",
+      "kind": "issuer_dividend_history",
+      "read": "full_text"
+    },
+    "cno25": {
+      "url": "https://www.cnoocltd.com/english/presscenter/pressreleases/2026/202603/t20260326_120621.html",
+      "kind": "issuer_results",
+      "read": "full_text"
+    },
+    "cno24": {
+      "url": "https://www.cnoocltd.com/english/presscenter/pressreleases/2025/202503/t20250327_114401.html",
+      "kind": "issuer_results",
+      "read": "primary_indexed_extract"
+    },
+    "ptr25": {
+      "url": "https://www.petrochina.com.cn/ptr/gsgg/202603/b46e36e530484779acf76f4f31b0917f/files/f0e953973376440c81c381f3d976bd40.pdf",
+      "kind": "issuer_results_filing",
+      "read": "full_text"
+    },
+    "snp25": {
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0322/2026032200047.pdf",
+      "kind": "issuer_exchange_filing",
+      "read": "primary_indexed_extract"
+    },
+    "snp_event": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0420/2026042001070.pdf",
+      "kind": "issuer_exchange_dividend_form",
+      "read": "primary_indexed_extract"
+    },
+    "icbc25": {
+      "url": "https://v.icbc.com.cn/userfiles/resources/icbcltd/download/2026/Announce20260506_1.pdf",
+      "kind": "issuer_A_implementation_filing",
+      "read": "full_text"
+    },
+    "icbc24": {
+      "url": "https://v.icbc.com.cn/userfiles/resources/icbcltd/download/2025/ResultPresentationCh20250415.pdf",
+      "kind": "issuer_results_transcript",
+      "read": "primary_indexed_extract"
+    },
+    "ccb": {
+      "url": "https://en.ccb.com/chn/home/investor/summary/fhqk/index.shtml",
+      "kind": "issuer_dividend_history",
+      "read": "full_text"
+    },
+    "boc25": {
+      "url": "https://pic.bankofchina.com/bocappd/report/202607/P020260705647145088289.pdf",
+      "kind": "issuer_A_implementation_filing",
+      "read": "full_text"
+    },
+    "boc_h": {
+      "url": "https://pic.bankofchina.com/bocappd/report/202607/P020260715349675745745.pdf",
+      "kind": "issuer_H_currency_option_form",
+      "read": "full_text"
+    },
+    "boc24": {
+      "url": "https://www.boc.cn/investor/ir5/202504/P020250420624888698809.pdf",
+      "kind": "issuer_A_implementation_filing",
+      "read": "full_text"
+    },
+    "cypc25": {
+      "url": "https://www.cypc.com.cn/cypc/attachDir/2026/05/2026051815072554604.pdf",
+      "kind": "issuer_distribution_proposal",
+      "read": "primary_indexed_extract",
+      "limit": "Full PDF fetch failed 502; final implementation dates remain unverified in primary text."
+    },
+    "shen_i": {
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0829/2025082903224.pdf",
+      "kind": "issuer_H_dividend_form",
+      "read": "primary_indexed_extract"
+    },
+    "shen_f": {
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0330/2026033003796.pdf",
+      "kind": "issuer_H_dividend_form",
+      "read": "primary_indexed_extract"
+    },
+    "o_event": {
+      "url": "https://www.realtyincome.com/sites/realty-income/files/10%2013%2026%20Realty%20Income%20Announces%20676th%20Consecutive%20Common%20Stock%20Monthly%20Dividend.pdf",
+      "kind": "issuer_dividend_release",
+      "read": "full_text"
+    },
+    "o_cov": {
+      "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000044/realtyincomeq22026supple.htm",
+      "kind": "issuer_SEC_supplement",
+      "read": "full_text"
+    },
+    "vz": {
+      "url": "https://www.verizon.com/about/investors/dividend-history",
+      "kind": "issuer_dividend_history",
+      "read": "full_text"
+    },
+    "t_event": {
+      "url": "https://about.att.com/story/2026/november-stock-dividend.html",
+      "kind": "issuer_dividend_release",
+      "read": "full_text"
+    },
+    "t_hist": {
+      "url": "https://investors.att.com/stock-information/historical-stock-information/historical-common-dividends/att-inc",
+      "kind": "issuer_dividend_history",
+      "read": "primary_indexed_extract"
+    },
+    "t_cut": {
+      "url": "https://investors.att.com/~/media/Files/A/ATT-IR-V2/documents/2022-03-31-10q.pdf",
+      "kind": "issuer_10Q",
+      "read": "primary_indexed_extract"
+    },
+    "mo": {
+      "url": "https://investor.altria.com/press-releases/news-details/2026/Altria-Increases-Quarterly-Dividend-to-1-11-Per-Share/default.aspx",
+      "kind": "issuer_dividend_release",
+      "read": "full_text"
+    },
+    "xom": {
+      "url": "https://www.sec.gov/Archives/edgar/data/2115436/000211543626000018/livef8k3q26991.htm",
+      "kind": "issuer_SEC_results_release",
+      "read": "full_text"
+    },
+    "jnj": {
+      "url": "https://investor.jnj.com/investor-news/news-details/2026/Johnson--Johnson-Announces-Quarterly-Dividend-for-Fourth-Quarter-2026/default.aspx",
+      "kind": "issuer_dividend_release",
+      "read": "full_text"
+    },
+    "jnj_raise": {
+      "url": "https://www.jnj.com/media-center/press-releases/johnson-johnson-announces-64th-consecutive-year-of-dividend-increase-raises-quarterly-dividend-by-3-1",
+      "kind": "issuer_dividend_release",
+      "read": "primary_indexed_extract"
+    }
+  },
+  "candidates": [
+    {
+      "symbol": "941.HK",
+      "issuer_id": "china_mobile",
+      "group": "telecom",
+      "quote_currency": "HKD",
+      "ordinary_dps": {
+        "amount": 5.27,
+        "currency": "HKD",
+        "method": "FY2025_ordinary_interim_plus_final"
+      },
+      "sources": [
+        "cm25",
+        "cm26"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "FY2025 ordinary interim HKD2.75 and final HKD2.52; FY2024 total HKD5.09; stated FY2025 payout75%.",
+        "Exchange relay reports FY2026 interim RMB2.51, changing declared currency versus FY2025 HKD."
+      ],
+      "inferences": [
+        "FY2025 yield at supplied HKD80 close is6.5875%; latest interim must be converted separately, not added numerically to HKD final."
+      ],
+      "latest_update": {
+        "amount": 2.51,
+        "currency": "CNY",
+        "period": "2026_interim",
+        "currency_basis_warning": true
+      },
+      "event_ids": [
+        "cm25_i",
+        "cm25_f",
+        "cm26_i"
+      ],
+      "missing": [
+        "2026 original issuer interim form and HKD settlement conversion",
+        "complete announcement timestamps and historical events",
+        "post-capex cash coverage"
+      ]
+    },
+    {
+      "symbol": "728.HK",
+      "issuer_id": "china_telecom",
+      "group": "telecom",
+      "quote_currency": "HKD",
+      "ordinary_dps": {
+        "amount": 0.272,
+        "currency": "CNY",
+        "method": "FY2025_ordinary_interim_plus_final"
+      },
+      "sources": [
+        "ct"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "Issuer records FY2025 interim0.1812 and final0.0908; FY2024 interim0.1671 plus final0.0927; FY2023 interim0.1432 plus final0.0900.",
+        "FY2026 interim is0.1606, below FY2025 interim0.1812."
+      ],
+      "inferences": [
+        "FY2026 comparable interim cut is11.3687%; strong annual history alone does not establish current sustainable DPS."
+      ],
+      "event_ids": [
+        "ct25_i",
+        "ct25_f",
+        "ct26_i"
+      ],
+      "flags": [
+        "latest_comparable_period_dividend_cut"
+      ],
+      "missing": [
+        "original announcement timestamps",
+        "HKD settlement conversions",
+        "latest capex/FCF coverage"
+      ]
+    },
+    {
+      "symbol": "883.HK",
+      "issuer_id": "cnooc",
+      "group": "upstream_oil",
+      "quote_currency": "HKD",
+      "ordinary_dps": {
+        "amount": 1.28,
+        "currency": "HKD",
+        "method": "FY2025_full_year_issuer_reported"
+      },
+      "sources": [
+        "cno25",
+        "cno24"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "Issuer FY2025 annual dividend HKD1.28 including proposed final0.55; dividend payout45%.",
+        "Issuer FY2024 annual dividend HKD1.40 including final0.66."
+      ],
+      "inferences": [
+        "FY2025 ordinary DPS fell8.5714%; HKD1.28/HKD24.70 supplied close=5.1822% gross baseline yield.",
+        "Payout45% does not establish through-cycle cash coverage."
+      ],
+      "flags": [
+        "annual_dividend_cut",
+        "commodity_sensitive"
+      ],
+      "event_ids": [
+        "cno25_f"
+      ],
+      "missing": [
+        "original implementation forms and all event dates",
+        "2026 interim review",
+        "stress oil price and maintenance capex coverage"
+      ]
+    },
+    {
+      "symbol": "857.HK",
+      "issuer_id": "petrochina",
+      "group": "integrated_oil",
+      "quote_currency": "HKD",
+      "ordinary_dps": {
+        "amount": 0.47,
+        "currency": "CNY",
+        "method": "FY2025_interim0.22_plus_final0.25"
+      },
+      "sources": [
+        "ptr25"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "FY2025 interim RMB0.22 paid H shares2025-10-23; final RMB0.25 proposed, H payment scheduled2026-07-31, record2026-06-25.",
+        "Same full-year dividend components as FY2024."
+      ],
+      "inferences": [
+        "Annual0.47 is a complete fiscal-year baseline; currency conversion is required against HKD price."
+      ],
+      "event_ids": [
+        "ptr25_i_h",
+        "ptr25_f_h"
+      ],
+      "missing": [
+        "original H announcement timestamps/ex dates",
+        "final approval/implementation confirmation",
+        "2026 interim and sector stress coverage"
+      ]
+    },
+    {
+      "symbol": "386.HK",
+      "issuer_id": "sinopec",
+      "group": "refining_chemicals",
+      "quote_currency": "HKD",
+      "ordinary_dps": {
+        "amount": 0.2,
+        "currency": "CNY",
+        "method": "FY2025_interim0.088_plus_final0.112"
+      },
+      "sources": [
+        "snp25",
+        "snp_event"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "Reported cash DPS for FY2023/2024/2025 is RMB0.345/0.286/0.200.",
+        "Final FY2025 dividend form explicitly labels0.112 ordinary; annual report81.0% payout table includes share repurchases."
+      ],
+      "inferences": [
+        "FY2025 DPS decline30.0699% vs FY2024; a high yield may reflect falling earnings, not stable income.",
+        "Do not use81% as pure cash-dividend payout ratio without removing repurchases."
+      ],
+      "flags": [
+        "consecutive_annual_dividend_cuts",
+        "buyback_payout_ratio_contamination"
+      ],
+      "event_ids": [
+        "snp25_f_h"
+      ],
+      "missing": [
+        "interim announcement history",
+        "HKD conversion",
+        "latest2026 distributions",
+        "refining margins/chemicals and FCF coverage"
+      ]
+    },
+    {
+      "symbol": "1398.HK",
+      "issuer_id": "icbc",
+      "group": "bank",
+      "quote_currency": "HKD",
+      "ordinary_dps": {
+        "amount": 0.3103,
+        "currency": "CNY",
+        "method": "FY2025_interim0.1414_plus_final0.1689"
+      },
+      "sources": [
+        "icbc25",
+        "icbc24"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "Issuer states FY2025 ordinary DPS0.3103 and FY2024 ordinary DPS0.308."
+      ],
+      "inferences": [
+        "FY2025 per-share increase0.7468%; H and A are same issuer exposure with different prices/currencies.",
+        "A-share implementation dates cannot be used as H-share dates."
+      ],
+      "event_ids": [],
+      "missing": [
+        "H-share interim/final dividend forms and exchange conversion",
+        "2026 interim implementation and cash-date TTM reconciliation",
+        "CET1/provisions/NPL/NIM checks"
+      ]
+    },
+    {
+      "symbol": "939.HK",
+      "issuer_id": "ccb",
+      "group": "bank",
+      "quote_currency": "HKD",
+      "ordinary_dps": {
+        "amount": 0.3887,
+        "currency": "CNY",
+        "method": "FY2025_interim0.1858_plus_final0.2029"
+      },
+      "sources": [
+        "ccb"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "Issuer history FY2025 .1858+.2029 and FY2024 .197+.206; history separately labels2007 special dividend."
+      ],
+      "inferences": [
+        "FY2025 per-share dividend fell3.5484%; changes in share count can affect DPS even if total distributions hold up."
+      ],
+      "flags": [
+        "annual_per_share_dividend_cut"
+      ],
+      "event_ids": [
+        "ccb25_i_h",
+        "ccb25_f_h"
+      ],
+      "missing": [
+        "H-share ex dates and original announcement times",
+        "H-share FX settlement per installment",
+        "latest2026 review",
+        "bank capital and asset quality coverage"
+      ]
+    },
+    {
+      "symbol": "3988.HK",
+      "issuer_id": "bank_of_china",
+      "group": "bank",
+      "quote_currency": "HKD",
+      "ordinary_dps": {
+        "amount": 0.2263,
+        "currency": "CNY",
+        "method": "FY2025_interim0.1094_plus_final0.1169"
+      },
+      "sources": [
+        "boc25",
+        "boc_h",
+        "boc24"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "FY2025 total ordinary DPS0.2263 versus FY2024 total0.2424.",
+        "H final dividend form declares RMB1.169 per10 shares, paid HKD1.3498284 per10; its FX factor is1.1546864103 HKD perCNY."
+      ],
+      "inferences": [
+        "FY2025 DPS fell6.6419%; normalize per10 to per1 before using yield.",
+        "H final0.13498284 HKD is a single installment, not annual DPS."
+      ],
+      "flags": [
+        "annual_per_share_dividend_cut",
+        "per_ten_share_unit_conversion"
+      ],
+      "event_ids": [
+        "boc25_f_h"
+      ],
+      "missing": [
+        "FY2025 H interim event/currency conversion",
+        "initial declaration versions and timestamps",
+        "latest2026 review",
+        "bank coverage"
+      ]
+    },
+    {
+      "symbol": "601398.SH",
+      "issuer_id": "icbc",
+      "group": "bank",
+      "quote_currency": "CNY",
+      "ordinary_dps": {
+        "amount": 0.3103,
+        "currency": "CNY",
+        "method": "FY2025_interim0.1414_plus_final0.1689"
+      },
+      "sources": [
+        "icbc25",
+        "icbc24"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "FY2025 final0.1689 and full-year0.3103 confirmed by issuer A implementation.",
+        "Issuer source says2024 was first year switching from annual to twice-yearly dividends."
+      ],
+      "inferences": [
+        "At supplied CNY8.75 close, FY2025 gross baseline yield3.5463%; supplied vendorTTM .4614/8.75 implies5.2731%, which is not sustainable annual income.",
+        "The proposed .1414+.1689+.1511 TTM decomposition requires original2026 interim event confirmation."
+      ],
+      "flags": [
+        "vendor_TTM_calendar_timing_warning"
+      ],
+      "event_ids": [
+        "icbc25_f_a"
+      ],
+      "missing": [
+        "all interim announcement/ex/payment events including2026",
+        "full TTM component reconciliation",
+        "bank coverage"
+      ]
+    },
+    {
+      "symbol": "601939.SH",
+      "issuer_id": "ccb",
+      "group": "bank",
+      "quote_currency": "CNY",
+      "ordinary_dps": {
+        "amount": 0.3887,
+        "currency": "CNY",
+        "method": "FY2025_interim0.1858_plus_final0.2029"
+      },
+      "sources": [
+        "ccb"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "Issuer dividend history shows FY2025 interim0.1858 and final0.2029, A-share paid2025-12-11 and2026-07-13 respectively."
+      ],
+      "inferences": [
+        "Same per-share cut3.5484% as H shares; do not duplicate issuer diversification across two listings."
+      ],
+      "flags": [
+        "annual_per_share_dividend_cut"
+      ],
+      "event_ids": [
+        "ccb25_i_a",
+        "ccb25_f_a"
+      ],
+      "missing": [
+        "original announcement/ex-date implementation forms",
+        "latest2026 review",
+        "bank coverage"
+      ]
+    },
+    {
+      "symbol": "600900.SH",
+      "issuer_id": "yangtze_power",
+      "group": "hydropower",
+      "quote_currency": "CNY",
+      "ordinary_dps": {
+        "amount": 1,
+        "currency": "CNY",
+        "method": "FY2025_interim0.21_plus_final0.79_proposal"
+      },
+      "sources": [
+        "cypc25"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "Indexed issuer proposal specifies FY2025 ordinary total1.00, with interim0.21 already distributed2026-02-12 and final0.79 proposed."
+      ],
+      "inferences": [
+        "At supplied CNY29.74 close, FY2025 baseline gross yield3.3625%; final payment must be checked in primary implementation filing."
+      ],
+      "flags": [
+        "primary_full_text_fetch_incomplete"
+      ],
+      "event_ids": [
+        "cypc25_i",
+        "cypc25_f"
+      ],
+      "missing": [
+        "primary final implementation confirmation",
+        "3_to5year ordinary events",
+        "hydrology/tariffs/maintenance capex/leverage coverage"
+      ]
+    },
+    {
+      "symbol": "601088.SH",
+      "issuer_id": "china_shenhua",
+      "group": "coal_power_logistics",
+      "quote_currency": "CNY",
+      "ordinary_dps": {
+        "amount": 2.01,
+        "currency": "CNY",
+        "method": "FY2025_ordinary_interim0.98_plus_final1.03"
+      },
+      "sources": [
+        "shen_i",
+        "shen_f"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "H-share issuer forms explicitly classify FY2025 interim0.98 and final1.03 as ordinary."
+      ],
+      "inferences": [
+        "Fiscal annual DPS2.01, not final-only1.03; H forms validate issuer economics but do not supply A-share event dates."
+      ],
+      "event_ids": [],
+      "flags": [
+        "final_only_annualisation_warning"
+      ],
+      "missing": [
+        "A-share implementation dates and announcements",
+        "FY2023/24 ordinary versus special separation",
+        "2026 interim and coal-cycle stress",
+        "corporate action/share-count effects"
+      ]
+    },
+    {
+      "symbol": "O.US",
+      "issuer_id": "realty_income",
+      "group": "reit",
+      "quote_currency": "USD",
+      "ordinary_dps": {
+        "amount": 3.258,
+        "currency": "USD",
+        "method": "latest_monthly_regular0.2715_times12_indicated"
+      },
+      "sources": [
+        "o_event",
+        "o_cov"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "2026-10-13 declares common monthly0.2715, issuer annualized3.258; record2026-10-30, payment2026-11-13.",
+        "H12026 dividend1.6215/AFFO2.22; issuer reports AFFO payout73.0% in Q2 supplement.",
+        "2026-06-30 net debt/annualized pro-forma adjusted EBITDAre5.4x before unsettled ATM equity adjustment."
+      ],
+      "inferences": [
+        "At supplied USD56.93 close, indicated gross yield5.7228%; rate*12 is forward indication, not12 already-paid dividends.",
+        "AFFO is more relevant than GAAP EPS for REIT cash coverage; definition/reconciliation and debt refinancing still matter."
+      ],
+      "event_ids": [
+        "o26_oct"
+      ],
+      "missing": [
+        "full monthly declaration history and explicit ex dates",
+        "REIT ordinary-income/capital-gain/return-of-capital tax classifications",
+        "tenant/lease concentration and latest AFFO review"
+      ]
+    },
+    {
+      "symbol": "VZ.US",
+      "issuer_id": "verizon",
+      "group": "telecom",
+      "quote_currency": "USD",
+      "ordinary_dps": {
+        "amount": 2.83,
+        "currency": "USD",
+        "method": "latest_quarterly_regular0.7075_times4_indicated"
+      },
+      "sources": [
+        "vz"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "Issuer history records2026-09-09 declaration0.7075, ex/record2026-10-09, pay2026-11-02.",
+        "2025-12-04 declaration0.69 paid2026-02-02; issuer table groups events by declaration year, not cash payment year."
+      ],
+      "inferences": [
+        "0.7075*4=2.83 forward indication; issuer2026 table total2.1225 omits quarter declared2025, so must not use table subtotal as full-year sustainable DPS."
+      ],
+      "event_ids": [
+        "vz26_sep",
+        "vz25_dec"
+      ],
+      "missing": [
+        "FCF after capital investment and spectrum",
+        "net debt/refinancing/lease commitments",
+        "complete event ingest"
+      ]
+    },
+    {
+      "symbol": "T.US",
+      "issuer_id": "att",
+      "group": "telecom",
+      "quote_currency": "USD",
+      "ordinary_dps": {
+        "amount": 1.11,
+        "currency": "USD",
+        "method": "latest_quarterly_regular0.2775_times4_indicated"
+      },
+      "sources": [
+        "t_event",
+        "t_hist",
+        "t_cut"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "2026-09-24 common dividend0.2775, record2026-10-12, payment2026-11-02.",
+        "2022 post-WarnerMedia transaction annual dividend reset1.11 versus prior quarterly0.52 annualized2.08."
+      ],
+      "inferences": [
+        "Annualized rate reduction46.6346% is a documented cut/corporate restructuring example, not a price-only adjustment.",
+        "Preferred and depositary-share dividends in same release must not be mixed with common T.US."
+      ],
+      "flags": [
+        "historical_dividend_reset_2022"
+      ],
+      "event_ids": [
+        "t26_sep"
+      ],
+      "missing": [
+        "exchange-confirmed ex date; third-party dates disagree",
+        "FCF after capex/spectrum and net leverage",
+        "spin-off corporate-action mapping"
+      ]
+    },
+    {
+      "symbol": "MO.US",
+      "issuer_id": "altria",
+      "group": "tobacco",
+      "quote_currency": "USD",
+      "ordinary_dps": {
+        "amount": 4.44,
+        "currency": "USD",
+        "method": "latest_quarterly_regular1.11_times4_indicated"
+      },
+      "sources": [
+        "mo"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "2026-08-27 raises quarterly regular1.06 to1.11; issuer annualized4.44; record2026-09-15, pay2026-10-09."
+      ],
+      "inferences": [
+        "Current indicated rate grew4.717%; forward dividends remain subject to future board declarations."
+      ],
+      "event_ids": [
+        "mo26_aug"
+      ],
+      "missing": [
+        "exchange-confirmed ex date",
+        "FCF coverage/debt and cigarette volume/price elasticity",
+        "regulatory/litigation and alternative product funding review"
+      ]
+    },
+    {
+      "symbol": "XOM.US",
+      "issuer_id": "exxonmobil",
+      "group": "integrated_oil",
+      "quote_currency": "USD",
+      "ordinary_dps": {
+        "amount": 4.28,
+        "currency": "USD",
+        "method": "latest_quarterly1.07_times4_indicated"
+      },
+      "sources": [
+        "xom"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "SEC-filed2026-10-30 results declareQ4 dividend1.07; record2026-11-16, pay2026-12-10.",
+        "Release identifies ExxonMobil Holdings Corporation and reportsQ3 CFO25.7bn, FCF19.1bn, dividends4.3bn USD."
+      ],
+      "inferences": [
+        "Indicated annual4.28; Q3 cash coverage~4.44x is one strong commodity quarter, not through-cycle coverage.",
+        "SEC CIK2115436 requires continuity mapping versus former Exxon Mobil Corporation issuer identifier before backtest."
+      ],
+      "event_ids": [
+        "xom26_oct"
+      ],
+      "role": "lower_yield_quality_and_cycle_comparator",
+      "missing": [
+        "explicit exchange ex date",
+        "holding company reorganisation/security continuity mapping",
+        "through-cycle normalized oil/gas prices and capex"
+      ]
+    },
+    {
+      "symbol": "JNJ.US",
+      "issuer_id": "johnson_johnson",
+      "group": "healthcare",
+      "quote_currency": "USD",
+      "ordinary_dps": {
+        "amount": 5.36,
+        "currency": "USD",
+        "method": "latest_quarterly_regular1.34_times4_indicated"
+      },
+      "sources": [
+        "jnj",
+        "jnj_raise"
+      ],
+      "quality_decision": "research_only_coverage_and_history_incomplete",
+      "confirmed_facts": [
+        "2026-10-13 declares quarterly common1.34; ex/record2026-11-24, pay2026-12-08.",
+        "2026-04-14 increase from1.30 to1.34 is issuer's64th consecutive annual increase."
+      ],
+      "inferences": [
+        "Indicated annual5.36; long increase history is evidence of continuity, not a substitute for current coverage.",
+        "Include as lower-yield quality comparator; do not force every dividend grower into a high-current-yield pool."
+      ],
+      "event_ids": [
+        "jnj26_oct"
+      ],
+      "role": "lower_yield_quality_comparator",
+      "missing": [
+        "current FCF/EPS coverage and debt",
+        "litigation/patent-expiry/product concentration review",
+        "complete history and corporate actions"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "cm25_i",
+      "amount": 2.75,
+      "currency": "HKD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": null,
+      "payment_date": null,
+      "status": "issuer_annual_report_says_paid",
+      "source": "cm25"
+    },
+    {
+      "id": "cm25_f",
+      "amount": 2.52,
+      "currency": "HKD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": "2026-03-26",
+      "approval_date": "2026-05-21",
+      "ex_date": null,
+      "record_date": "2026-06-11",
+      "payment_date": "2026-06-24",
+      "status": "proposed_in_initial_results_approval_date_scheduled_not_reverified",
+      "source": "cm25"
+    },
+    {
+      "id": "cm26_i",
+      "amount": 2.51,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2026-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": null,
+      "payment_date": null,
+      "status": "exchange_relay_only_original_event_form_pending",
+      "source": "cm26"
+    },
+    {
+      "id": "ct25_i",
+      "amount": 0.1812,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2025-08-27",
+      "record_date": null,
+      "payment_date": "2025-09-30",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct"
+    },
+    {
+      "id": "ct25_f",
+      "amount": 0.0908,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2026-06-02",
+      "record_date": null,
+      "payment_date": "2026-07-08",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct"
+    },
+    {
+      "id": "ct26_i",
+      "amount": 0.1606,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2026-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2026-09-02",
+      "record_date": null,
+      "payment_date": "2026-10-13",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct"
+    },
+    {
+      "id": "cno25_f",
+      "amount": 0.55,
+      "currency": "HKD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": "2026-03-26",
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": null,
+      "payment_date": null,
+      "status": "proposed_in_results_implementation_not_reverified",
+      "source": "cno25"
+    },
+    {
+      "id": "ptr25_i_h",
+      "amount": 0.22,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": null,
+      "payment_date": "2025-10-23",
+      "listing": "H",
+      "status": "issuer_report_says_paid",
+      "source": "ptr25"
+    },
+    {
+      "id": "ptr25_f_h",
+      "amount": 0.25,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2026-06-25",
+      "payment_date": "2026-07-31",
+      "listing": "H",
+      "status": "scheduled_in_initial_results",
+      "source": "ptr25"
+    },
+    {
+      "id": "snp25_f_h",
+      "amount": 0.112,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": "2026-03-20",
+      "approval_date": "2026-05-13",
+      "ex_date": "2026-06-08",
+      "record_date": "2026-06-16",
+      "payment_date": "2026-06-26",
+      "source_version_date": "2026-04-20",
+      "listing": "H",
+      "status": "ordinary_dividend_form_approval_date_was_scheduled",
+      "source": "snp_event"
+    },
+    {
+      "id": "icbc25_f_a",
+      "amount": 0.1689,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": "2026-05-06",
+      "approval_date": "2026-04-23",
+      "ex_date": "2026-05-13",
+      "record_date": "2026-05-12",
+      "payment_date": "2026-05-13",
+      "listing": "A",
+      "status": "implementation_filing",
+      "source": "icbc25"
+    },
+    {
+      "id": "ccb25_i_h",
+      "amount": 0.1858,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2025-12-10",
+      "payment_date": "2026-01-26",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ccb"
+    },
+    {
+      "id": "ccb25_f_h",
+      "amount": 0.2029,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2026-07-10",
+      "payment_date": "2026-08-21",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ccb"
+    },
+    {
+      "id": "ccb25_i_a",
+      "amount": 0.1858,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2025-12-10",
+      "payment_date": "2025-12-11",
+      "listing": "A",
+      "status": "issuer_history_record",
+      "source": "ccb"
+    },
+    {
+      "id": "ccb25_f_a",
+      "amount": 0.2029,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2026-07-10",
+      "payment_date": "2026-07-13",
+      "listing": "A",
+      "status": "issuer_history_record",
+      "source": "ccb"
+    },
+    {
+      "id": "boc25_f_h",
+      "amount": 0.1169,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": "2026-06-26",
+      "ex_date": "2026-07-02",
+      "record_date": "2026-07-09",
+      "payment_date": "2026-08-19",
+      "source_version_date": "2026-07-15",
+      "listing": "H",
+      "settlement_amount": 0.13498284,
+      "settlement_currency": "HKD",
+      "FX_HKD_per_CNY": 1.1546864103,
+      "status": "updated_ordinary_currency_option_form_initial_publication_pending",
+      "source": "boc_h"
+    },
+    {
+      "id": "cypc25_i",
+      "amount": 0.21,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": null,
+      "payment_date": "2026-02-12",
+      "listing": "A",
+      "status": "indexed_issuer_proposal_says_already_distributed",
+      "source": "cypc25"
+    },
+    {
+      "id": "cypc25_f",
+      "amount": 0.79,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": null,
+      "payment_date": null,
+      "listing": "A",
+      "status": "proposal_only_in_primary_evidence",
+      "source": "cypc25"
+    },
+    {
+      "id": "o26_oct",
+      "amount": 0.2715,
+      "currency": "USD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2026-12-31",
+      "period": "monthly",
+      "nature": "ordinary",
+      "announcement_date": "2026-10-13",
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2026-10-30",
+      "payment_date": "2026-11-13",
+      "status": "declared",
+      "source": "o_event"
+    },
+    {
+      "id": "vz26_sep",
+      "amount": 0.7075,
+      "currency": "USD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2026-12-31",
+      "period": "quarterly",
+      "nature": "ordinary",
+      "announcement_date": "2026-09-09",
+      "approval_date": null,
+      "ex_date": "2026-10-09",
+      "record_date": "2026-10-09",
+      "payment_date": "2026-11-02",
+      "status": "issuer_history_record",
+      "source": "vz"
+    },
+    {
+      "id": "vz25_dec",
+      "amount": 0.69,
+      "currency": "USD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2025-12-31",
+      "period": "quarterly",
+      "nature": "ordinary",
+      "announcement_date": "2025-12-04",
+      "approval_date": null,
+      "ex_date": "2026-01-12",
+      "record_date": "2026-01-12",
+      "payment_date": "2026-02-02",
+      "fiscal_attribution_note": "Declaration-year grouping; do not interpret this fiscal_year_end as a statement that dividend was earned in that fiscal quarter.",
+      "status": "issuer_history_record",
+      "source": "vz"
+    },
+    {
+      "id": "t26_sep",
+      "amount": 0.2775,
+      "currency": "USD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2026-12-31",
+      "period": "quarterly",
+      "nature": "ordinary",
+      "announcement_date": "2026-09-24",
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2026-10-12",
+      "payment_date": "2026-11-02",
+      "status": "declared",
+      "source": "t_event"
+    },
+    {
+      "id": "mo26_aug",
+      "amount": 1.11,
+      "currency": "USD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2026-12-31",
+      "period": "quarterly",
+      "nature": "ordinary",
+      "announcement_date": "2026-08-27",
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2026-09-15",
+      "payment_date": "2026-10-09",
+      "status": "declared_regular",
+      "source": "mo"
+    },
+    {
+      "id": "xom26_oct",
+      "amount": 1.07,
+      "currency": "USD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2026-12-31",
+      "period": "quarterly",
+      "nature": "ordinary",
+      "announcement_date": "2026-10-30",
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2026-11-16",
+      "payment_date": "2026-12-10",
+      "status": "declared",
+      "source": "xom"
+    },
+    {
+      "id": "jnj26_oct",
+      "amount": 1.34,
+      "currency": "USD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2026-12-31",
+      "period": "quarterly",
+      "nature": "ordinary",
+      "announcement_date": "2026-10-13",
+      "approval_date": null,
+      "ex_date": "2026-11-24",
+      "record_date": "2026-11-24",
+      "payment_date": "2026-12-08",
+      "status": "declared",
+      "source": "jnj"
+    }
+  ],
+  "point_in_time_design": {
+    "event_key": [
+      "issuer_id",
+      "listing_id",
+      "fiscal_year_end",
+      "reporting_period",
+      "ordinary_or_special",
+      "announcement_id",
+      "version"
+    ],
+    "required": [
+      "source_url",
+      "source_publication_timestamp_and_timezone",
+      "first_seen_timestamp",
+      "event_version",
+      "supersedes_id",
+      "board_proposal_date",
+      "shareholder_approval_date_if_required",
+      "status",
+      "ex_date",
+      "record_date",
+      "payment_date",
+      "gross_DPS",
+      "dividend_currency",
+      "per_share_or_per10_unit",
+      "share_class",
+      "fiscal_attribution",
+      "settlement_currency_and_FX_publication",
+      "split_or_ADS_ratio_effective_date"
+    ],
+    "signal_availability": "At close t use only versions published before that market's signal cutoff. After-close announcement first affects the next tradable session. If only a date is known, apply a conservative next-session lag and mark estimated. Never attach later updates retroactively.",
+    "cash_accounting": "Entitlement is determined from shares held before actual ex date; recognize receivable then cash only on pay date, with route-specific withholding, FX spread, fees and share count. Track unsettled receivable at period end.",
+    "ordinary_baseline": "For semiannual issuers use complete latest known fiscal-year ordinary interim+final, excluding special, return of capital and buybacks. Keep board-proposed separate from approved; latest comparable-period cut triggers review and downward scenarios, not an automatic buy on higher yield. Do not annualize one semiannual installment by2.",
+    "us_run_rate": "For stable ordinary monthly/quarterly schedule latest declared regular DPS*12/*4 may be shown as INDICATED annual amount; maintain separately from completed fiscal-year DPS and TTM cash received. Future installments are not guaranteed.",
+    "currency": "DPS currency and price currency must match. For historical signal use only FX known then; actual cash uses issuer/depositary conversion and payment-date mechanics. A HKD/CNY settlement choice is not two dividends. Bank of China source demonstrates per10 shares and an announced FX conversion.",
+    "ads": "All18 listed instruments here are ordinary/common shares (A,H orUS common), not ADR/ADS. For any expansion to ADRs require depositary primary source for underlying-shares-per-ADS and effective date; multiply underlying DPS by that ratio, convert currency, subtract depositary fees and withholding. Never mix a per-H-share dividend with per-ADS price.",
+    "specials_and_splits": "Store specials separately and exclude them from recurring yield. A regular dividend plus special in same notice creates two components. Split-adjust old DPS only on a consistent per-share basis with comparable prices; retain original cash units. Include spin-offs/mergers/name changes in total-return accounting.",
+    "backtest_gate": "No profitability conclusion until complete PIT dividends, corporate actions, historical universe including failures/delistings, tradable bars, tax/FX/fees and next-session execution are reconstructed. Current yields must never be backfilled into2023-2026."
+  },
+  "coverage_groups": {
+    "telecom": {
+      "members": [
+        "941.HK",
+        "728.HK",
+        "VZ.US",
+        "T.US"
+      ],
+      "why_different": "Recurring subscriptions help cash generation, while capex, spectrum and leases consume cash; similar headline yield can conceal different financing burdens.",
+      "checks": [
+        "FCF after realistic network capex/spectrum",
+        "common dividends/FCF",
+        "net debt/EBITDA and maturities",
+        "lease cash obligations",
+        "customer/revenue and regulatory-tax shifts"
+      ],
+      "known_risk_examples": [
+        "728 latest comparable interim cut",
+        "T historical2022 reset"
+      ]
+    },
+    "bank": {
+      "members": [
+        "1398.HK",
+        "939.HK",
+        "3988.HK",
+        "601398.SH",
+        "601939.SH"
+      ],
+      "why_different": "Cash-flow-statement FCF is not a suitable bank coverage gate; loss absorption and regulatory capital constrain distributions.",
+      "checks": [
+        "CET1 and required buffers",
+        "NPL/stage2 loans and provisions",
+        "net interest margin",
+        "profit after preferred/AT1 claims versus common dividend",
+        "share count and capital issuance",
+        "issuer-level concentration across A/H"
+      ],
+      "known_risk_examples": [
+        "CCB andBOC FY2025 per-share cuts",
+        "ICBC payment-frequency TTM distortion"
+      ]
+    },
+    "upstream_oil": {
+      "members": [
+        "883.HK"
+      ],
+      "why_different": "Distributions depend on oil/gas prices and sustaining production; low reported payout can coexist with a falling dividend.",
+      "checks": [
+        "oil/gas downside price FCF after sustaining capex",
+        "unit costs/reserves/depletion",
+        "balance sheet and decommissioning obligations"
+      ],
+      "known_risk_examples": [
+        "CNOOC FY2025 DPS cut8.57%"
+      ]
+    },
+    "integrated_oil": {
+      "members": [
+        "857.HK",
+        "XOM.US"
+      ],
+      "why_different": "Integration diversifies segments but upstream/refining margins still cycle; a strong quarter cannot define sustainable annual income.",
+      "checks": [
+        "multi-year cycle-normalized FCF",
+        "dividends plus sustaining capex",
+        "net debt and capital commitments",
+        "segment margin sensitivity"
+      ]
+    },
+    "refining_chemicals": {
+      "members": [
+        "386.HK"
+      ],
+      "why_different": "Refining and chemical spreads can weaken independently of upstream prices; buybacks are not cash income to holders.",
+      "checks": [
+        "cash dividend-only payout",
+        "refining utilization and margins",
+        "chemicals losses",
+        "FCF after maintenance capex"
+      ],
+      "known_risk_examples": [
+        "two consecutive annual ordinary DPS cuts",
+        "81% table contains buybacks"
+      ]
+    },
+    "coal_power_logistics": {
+      "members": [
+        "601088.SH"
+      ],
+      "why_different": "Coal price, long-term contracted volumes, power margins and transport integration affect recurring cash; interim introduction changes cash calendar.",
+      "checks": [
+        "coal downside FCF",
+        "contract versus spot exposure",
+        "power segment and logistics cash",
+        "sustaining capex and share-count/corporate actions",
+        "ordinary versus special distributions"
+      ]
+    },
+    "hydropower": {
+      "members": [
+        "600900.SH"
+      ],
+      "why_different": "Hydrology, regulated tariffs and acquisition debt matter more than a generic payout cutoff.",
+      "checks": [
+        "dry-year generation stress",
+        "tariffs/dispatch",
+        "maintenance capex",
+        "debt service and interest-rate exposure",
+        "parent versus consolidated distributable cash"
+      ]
+    },
+    "reit": {
+      "members": [
+        "O.US"
+      ],
+      "why_different": "Depreciation depresses GAAP profit; AFFO with reconciliation is a better recurring cash starting point, while refinancing and tenant risk remain material.",
+      "checks": [
+        "dividends/AFFO across multiple years",
+        "AFFO adjustments and recurring maintenance",
+        "occupancy/rent collection",
+        "tenant concentration and lease duration",
+        "net debt/EBITDAre/maturities/fixed-rate mix",
+        "tax character including return of capital"
+      ]
+    },
+    "tobacco": {
+      "members": [
+        "MO.US"
+      ],
+      "why_different": "High cash margins coexist with structural volume decline and regulation; high yield requires downside coverage rather than a universal safe-yield label.",
+      "checks": [
+        "price/mix versus volume decline",
+        "cash dividend/FCF",
+        "debt and regulatory/litigation",
+        "new product investment"
+      ]
+    },
+    "healthcare": {
+      "members": [
+        "JNJ.US"
+      ],
+      "why_different": "Lower current yield may buy greater business diversification; patents, litigation and reinvestment still constrain coverage.",
+      "checks": [
+        "FCF and adjusted earnings reconciliation",
+        "patent cliff/pipeline",
+        "litigation and net debt",
+        "business separation continuity"
+      ],
+      "role": "quality_comparison_not_automatically_high_yield"
+    }
+  },
+  "rule_proposals": {
+    "status": "hypotheses_for_research_not_validated_trading_parameters",
+    "ordinary_sustainable_dividend": "D_base = complete known ordinary fiscal DPS, with specials excluded; D_stress = D_base*(1-cut_scenario). Use latest declared US run rate as a separate indicator. Base must be reduced/reviewed after a known cut, not frozen to historical high.",
+    "candidate_eligibility": [
+      "at_least3_complete_fiscal_years_ordinary_records",
+      "sector_specific_coverage_pass",
+      "current_reconciled_currency_and_units",
+      "no_unresolved_cut_or_special_or_corporate_action_flag",
+      "adequate_liquidity_and_risk_budget"
+    ],
+    "buy_rule": "After eligibility passes, compare Y_base=D_base/P and Y_stress=D_stress/P with a predeclared group/issuer hurdle; stage research entries only when both income valuation and price provide margin. A rising yield caused by a cut is not an eligibility pass.",
+    "reduce_rule": "When price rises so normalized yield falls below the group's lower exit threshold, stage reductions; a verified dividend cut or coverage failure is a separate fundamental review trigger even if price fell.",
+    "threshold_research_grid": {
+      "gross_buy_yield_pct": [
+        4,
+        5,
+        6.5,
+        8
+      ],
+      "cut_scenarios_pct": [
+        0,
+        10,
+        20,
+        30
+      ],
+      "minimum_buy_minus_reduce_gap_percentage_points": [
+        1,
+        1.5,
+        2
+      ],
+      "interpretation": "Test group-specific combinations and known-at-time local currency bond yield spreads; no common6.5% threshold is accepted acrossbanks/oil/REITs/tobacco."
+    },
+    "price_examples_from_supplied_2026_10_30_snapshot": [
+      {
+        "symbol": "941.HK",
+        "price": 80,
+        "currency": "HKD",
+        "baseline_DPS": 5.27,
+        "gross_yield_pct": 6.5875,
+        "buy_yield_example_pct": 6.5,
+        "implied_price": 81.076923,
+        "reduce_yield_example_pct": 5,
+        "implied_reduce_price": 105.4,
+        "note": "Arithmetic only; latest2026 interim currency conversion and coverage still pending."
+      },
+      {
+        "symbol": "601398.SH",
+        "price": 8.75,
+        "currency": "CNY",
+        "baseline_DPS": 0.3103,
+        "gross_yield_pct": 3.546286,
+        "vendor_TTM_DPS": 0.4614,
+        "vendor_TTM_implied_yield_pct": 5.273143,
+        "note": "A distorted calendar cash sum can change a screen result."
+      },
+      {
+        "symbol": "883.HK",
+        "price": 24.7,
+        "currency": "HKD",
+        "baseline_DPS": 1.28,
+        "gross_yield_pct": 5.182186,
+        "note": "Annual dividend fell; FY2024 historical1.40 cannot be treated as current base."
+      },
+      {
+        "symbol": "600900.SH",
+        "price": 29.74,
+        "currency": "CNY",
+        "baseline_DPS": 1,
+        "gross_yield_pct": 3.362475,
+        "note": "Primary final implementation and coverage pending."
+      },
+      {
+        "symbol": "O.US",
+        "price": 56.93,
+        "currency": "USD",
+        "indicated_DPS": 3.258,
+        "gross_yield_pct": 5.722817,
+        "note": "Latest rate times12 indicated; not a confirmed next12months cash sum."
+      }
+    ],
+    "portfolio": "Separate dividend strategy cash, inventory and attribution from price-only strategy; cap economic issuer and sector exposure and stage sizes with finite cash, board lots and taxes. Cross-listings count as one issuer risk.",
+    "comparison_design": "Compare dividend-rule portfolio against buy-and-hold of same eligible universe, cash/bond baseline and price-only rule on a separately chosen volatile universe. Record total return and income separately; do not call price-only adjusted-price results dividend-strategy alpha."
+  },
+  "daily_staged_research": {
+    "day1": {
+      "deliverable": "Normalize18 listings/16 issuers, ordinary/special components and dated sources; list all missing fields.",
+      "acceptance": "Every amount has source, share unit, fiscal tag and currency; known cuts visible."
+    },
+    "day2": {
+      "deliverable": "Complete3_to5years issuer event ledger including announcement versions/ex/pay dates and currency changes.",
+      "acceptance": "No unknown announcement history silently treated as known; A/H schedules separate."
+    },
+    "day3": {
+      "deliverable": "Sector coverage notes and bear/base dividend scenarios; reconcile missing tax/FX/ADS/corporate actions.",
+      "acceptance": "Candidate pass/watch/reject reasons with numerical coverage and source dates."
+    },
+    "day4": {
+      "deliverable": "Point-in-time historical signal reconstruction, fees/tax/FX/lot rules and same-universe benchmarks.",
+      "acceptance": "No look-ahead; event/cash accounting reconciles on sampled actual dates."
+    },
+    "day5": {
+      "deliverable": "Walk-forward and parameter sensitivity with finite capital; independent volatile-price pool report.",
+      "acceptance": "Separate price return, dividend cash, unrealized loss/drawdown and turnover; no selection of only successful thresholds."
+    },
+    "ongoing_daily_report_fields": [
+      "as_of_market_close",
+      "new_primary_sources",
+      "new_or_revised_ordinary_events",
+      "cuts_or_specials",
+      "coverage_state_changes",
+      "base/stress_yields_and_implied_prices",
+      "missing_data_progress",
+      "experiment_changes_and_hypothesis_version",
+      "next_stage_and_acceptance_gap"
+    ],
+    "schedule_note": "Proposed research content only; this file does not create or change an automation."
+  },
+  "material_limitations": [
+    "Research candidate list is purposive and not a survivorship-free investment universe.",
+    "Many event dates are null and some source facts rely on indexed primary extracts because live PDF retrieval failed.",
+    "Source publication times and revisions are not fully reconstructed; this file is not a valid historical signal dataset.",
+    "Most sector coverage checks remain unmeasured. No candidate receives a current buy recommendation.",
+    "Only five price/yield arithmetic examples use the supplied quote snapshot; other live prices are intentionally absent.",
+    "Gross yields are not after-tax investor income and need account route, domicile and holding-period treatment."
+  ]
+}

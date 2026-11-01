@@ -11,12 +11,14 @@ dependencies = ["fastapi==0.162.0", "uvicorn==0.41.0", "httpx==0.28.1", "cryptog
 
 [project.optional-dependencies]
 dev = ["pytest==9.2.0", "pytest-asyncio==1.4.1", "ruff==0.17.3"]
+research = ["tzdata==2026.6"]
 
 [tool.setuptools.packages.find]
-include = ["router*"]
+include = ["router*", "research*"]
 
 [tool.setuptools.package-data]
 router = ["static/*"]
+research = ["*.json", "README.md"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

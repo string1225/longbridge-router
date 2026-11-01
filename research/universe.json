@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "as_of": "2026-11-01",
+  "selection_note": "Purposive research candidates, not a historical unbiased universe. Dividend candidates require ordinary-dividend safety and yield screening; volatile candidates require training-period price volatility screening. Overlapping economic issuers are not independent diversification.",
+  "default_cost_bps_by_market": {"CN": 10, "HK": 25, "US": 10},
+  "dividend_candidates": [
+    {"symbol": "941.HK", "name": "中国移动", "sector": "telecom"},
+    {"symbol": "728.HK", "name": "中国电信", "sector": "telecom"},
+    {"symbol": "883.HK", "name": "中海油", "sector": "energy"},
+    {"symbol": "857.HK", "name": "中国石油", "sector": "energy"},
+    {"symbol": "386.HK", "name": "中国石化", "sector": "energy"},
+    {"symbol": "1398.HK", "name": "工商银行H", "sector": "bank", "issuer_group": "ICBC"},
+    {"symbol": "939.HK", "name": "建设银行H", "sector": "bank", "issuer_group": "CCB"},
+    {"symbol": "3988.HK", "name": "中国银行H", "sector": "bank"},
+    {"symbol": "601398.SH", "name": "工商银行A", "sector": "bank", "issuer_group": "ICBC"},
+    {"symbol": "601939.SH", "name": "建设银行A", "sector": "bank", "issuer_group": "CCB"},
+    {"symbol": "600900.SH", "name": "长江电力", "sector": "utility"},
+    {"symbol": "601088.SH", "name": "中国神华", "sector": "energy"},
+    {"symbol": "O.US", "name": "Realty Income", "sector": "reit"},
+    {"symbol": "VZ.US", "name": "Verizon", "sector": "telecom"},
+    {"symbol": "T.US", "name": "AT&T", "sector": "telecom"},
+    {"symbol": "MO.US", "name": "Altria", "sector": "tobacco"},
+    {"symbol": "XOM.US", "name": "Exxon Mobil", "sector": "energy"},
+    {"symbol": "JNJ.US", "name": "Johnson & Johnson", "sector": "healthcare"}
+  ],
+  "volatility_candidates": [
+    {"symbol": "BABA.US", "name": "阿里巴巴ADR", "issuer_group": "Alibaba"},
+    {"symbol": "NVDA.US", "name": "英伟达"},
+    {"symbol": "TSLA.US", "name": "特斯拉"},
+    {"symbol": "AMD.US", "name": "AMD"},
+    {"symbol": "AMZN.US", "name": "亚马逊"},
+    {"symbol": "META.US", "name": "Meta"},
+    {"symbol": "COIN.US", "name": "Coinbase"},
+    {"symbol": "PLTR.US", "name": "Palantir"},
+    {"symbol": "MSTR.US", "name": "Strategy"},
+    {"symbol": "HOOD.US", "name": "Robinhood"},
+    {"symbol": "9988.HK", "name": "阿里巴巴港股", "issuer_group": "Alibaba"},
+    {"symbol": "700.HK", "name": "腾讯"},
+    {"symbol": "3690.HK", "name": "美团"},
+    {"symbol": "1810.HK", "name": "小米"},
+    {"symbol": "1024.HK", "name": "快手"}
+  ],
+  "benchmarks": [
+    {"symbol": "SPY.US", "name": "S&P500 ETF"},
+    {"symbol": "QQQ.US", "name": "Nasdaq100 ETF"},
+    {"symbol": "SCHD.US", "name": "US dividend ETF"}
+  ]
+}
