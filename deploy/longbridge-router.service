@@ -1,0 +1,29 @@
+[Unit]
+Description=Longbridge OAuth and market data router
+After=network-online.target mihomo.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=longbridge-router
+Group=longbridge-router
+WorkingDirectory=/opt/longbridge-router/current
+EnvironmentFile=/etc/longbridge-router.env
+ExecStart=/opt/longbridge-router/current/.venv/bin/python -m uvicorn router.main:app --host 127.0.0.1 --port 18090 --root-path /longbridge --no-access-log --proxy-headers --forwarded-allow-ips=127.0.0.1
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+StateDirectory=longbridge-router
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/longbridge-router
+CapabilityBoundingSet=
+RestrictSUIDSGID=true
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

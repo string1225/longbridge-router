@@ -1,0 +1,4 @@
+interface:
+  display_name: "139 长桥接口开发"
+  short_description: "通过 139 OAuth 中转构建 A 股、港股、美股行情应用和只读账户接口"
+  default_prompt: "使用 $longbridge-router 为当前项目接入 139 长桥行情中转接口。"

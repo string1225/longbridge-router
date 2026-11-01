@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+.env
+data/
+*.sqlite*
+*.tar.gz
+artifacts/
+node_modules/
+*.egg-info/
+build/
+dist/
