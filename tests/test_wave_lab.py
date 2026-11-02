@@ -19,6 +19,14 @@ def engine():
     return wave_lab
 
 
+def test_short_forward_observation_does_not_publish_extreme_annualized_return():
+    result = engine().simulate(
+        bars=engine().normalize_bars(candles([100, 110])), variant="half_hold", fee_rate=0
+    )
+    assert result["metrics"]["return"] == pytest.approx(0.05)
+    assert result["metrics"]["cagr"] is None
+
+
 def test_new_observations_go_to_separate_forward_paper_period():
     lab = engine()
     rows = training_rows() + candles([100, 110, 90], start="2026-11-02")
@@ -346,8 +354,9 @@ def test_metrics_drawdown_include_initial_cost_and_remain_finite():
     assert result["metrics"]["max_drawdown"] == pytest.approx(expected_dd)
     assert all(
         math.isfinite(result["metrics"][key])
-        for key in ("return", "cagr", "max_drawdown", "mean_exposure", "costs")
+        for key in ("return", "max_drawdown", "mean_exposure", "costs")
     )
+    assert result["metrics"]["cagr"] is None
 
 
 def test_market_fee_assumptions_apply_to_every_variant_and_benchmarks_are_separate():

@@ -29,3 +29,7 @@ Protocol v1 also reserves a separate indicative forward-paper period from 2026-1
 - [x] Run verification, inspect intended changes, commit and push.
 
 Initial verification: 71 tests and Ruff passed; independent review findings were fixed and rechecked. All36 histories through2026-10-30 were collected without HTTP errors; repeat collection used36 cache hits and6 market-summary requests. Fixed base/zero-cost/50bp experiments and the initial2026-11-01 report are stored under the private research root. Four invalid OHLC rows are disclosed and excluded. Dividend event completeness and sector coverage remain ongoing research, not completed backtest claims.
+
+## 2026-11-02 stage
+
+Keep the universe and original forward rules fixed. Add training-only monthly exposure controls and explicitly retrospective mean-exposure-matched controls; report listing and issuer-balanced statistics separately. Suppress annualization below30 observations. Recheck China Telecom's original dividend-history page and add seven dated H-share historical cash events, without inventing announcement timestamps or FX. Preserve the private daily report, data revision audit and experiment provenance. Next: board-lot/minimum-fee sensitivity and announcement-time/sector coverage gaps.

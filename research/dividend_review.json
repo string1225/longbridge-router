@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-01 Asia/Shanghai",
+  "as_of": "2026-11-02 Asia/Shanghai",
   "scope": "Dividend research evidence only. No broker orders, credentials, operational API calls or performance claims.",
   "source_retrieved_date": "2026-11-01",
   "universe": {
@@ -44,7 +44,8 @@
     "ct": {
       "url": "https://www.chinatelecom-h.com/en/ir/dividend.php",
       "kind": "issuer_dividend_history",
-      "read": "full_text"
+      "read": "full_text",
+      "last_reverified_date": "2026-11-02"
     },
     "cno25": {
       "url": "https://www.cnoocltd.com/english/presscenter/pressreleases/2026/202603/t20260326_120621.html",
@@ -224,12 +225,20 @@
       "quality_decision": "research_only_coverage_and_history_incomplete",
       "confirmed_facts": [
         "Issuer records FY2025 interim0.1812 and final0.0908; FY2024 interim0.1671 plus final0.0927; FY2023 interim0.1432 plus final0.0900.",
-        "FY2026 interim is0.1606, below FY2025 interim0.1812."
+        "FY2026 interim is0.1606, below FY2025 interim0.1812.",
+        "2026-11-02 rechecked issuer H-share history: FY2021 final through FY2026 interim now have ten ex/payment-date records. Original publication timestamps and HKD settlement conversions remain missing."
       ],
       "inferences": [
         "FY2026 comparable interim cut is11.3687%; strong annual history alone does not establish current sustainable DPS."
       ],
       "event_ids": [
+        "ct21_f",
+        "ct22_i",
+        "ct22_f",
+        "ct23_i",
+        "ct23_f",
+        "ct24_i",
+        "ct24_f",
         "ct25_i",
         "ct25_f",
         "ct26_i"
@@ -1196,6 +1205,146 @@
       "payment_date": "2026-12-08",
       "status": "declared",
       "source": "jnj"
+    },
+    {
+      "id": "ct21_f",
+      "amount": 0.17,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2021-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "nature_basis": "Regular interim/final in issuer dividend history; original announcement review pending",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2022-05-31",
+      "record_date": null,
+      "payment_date": "2022-07-18",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct",
+      "first_seen_date": "2026-11-02",
+      "publication_timestamp": null
+    },
+    {
+      "id": "ct22_i",
+      "amount": 0.12,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2022-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "nature_basis": "Regular interim/final in issuer dividend history; original announcement review pending",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2022-08-31",
+      "record_date": null,
+      "payment_date": "2022-10-14",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct",
+      "first_seen_date": "2026-11-02",
+      "publication_timestamp": null
+    },
+    {
+      "id": "ct22_f",
+      "amount": 0.076,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2022-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "nature_basis": "Regular interim/final in issuer dividend history; original announcement review pending",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2023-05-31",
+      "record_date": null,
+      "payment_date": "2023-07-21",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct",
+      "first_seen_date": "2026-11-02",
+      "publication_timestamp": null
+    },
+    {
+      "id": "ct23_i",
+      "amount": 0.1432,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2023-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "nature_basis": "Regular interim/final in issuer dividend history; original announcement review pending",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2023-08-23",
+      "record_date": null,
+      "payment_date": "2023-09-28",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct",
+      "first_seen_date": "2026-11-02",
+      "publication_timestamp": null
+    },
+    {
+      "id": "ct23_f",
+      "amount": 0.09,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2023-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "nature_basis": "Regular interim/final in issuer dividend history; original announcement review pending",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2024-06-05",
+      "record_date": null,
+      "payment_date": "2024-07-26",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct",
+      "first_seen_date": "2026-11-02",
+      "publication_timestamp": null
+    },
+    {
+      "id": "ct24_i",
+      "amount": 0.1671,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2024-12-31",
+      "period": "interim",
+      "nature": "ordinary",
+      "nature_basis": "Regular interim/final in issuer dividend history; original announcement review pending",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2024-09-03",
+      "record_date": null,
+      "payment_date": "2024-10-18",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct",
+      "first_seen_date": "2026-11-02",
+      "publication_timestamp": null
+    },
+    {
+      "id": "ct24_f",
+      "amount": 0.0927,
+      "currency": "CNY",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2024-12-31",
+      "period": "final",
+      "nature": "ordinary",
+      "nature_basis": "Regular interim/final in issuer dividend history; original announcement review pending",
+      "announcement_date": null,
+      "approval_date": null,
+      "ex_date": "2025-06-03",
+      "record_date": null,
+      "payment_date": "2025-07-18",
+      "listing": "H",
+      "status": "issuer_history_record",
+      "source": "ct",
+      "first_seen_date": "2026-11-02",
+      "publication_timestamp": null
     }
   ],
   "point_in_time_design": {
@@ -1513,5 +1662,30 @@
     "Most sector coverage checks remain unmeasured. No candidate receives a current buy recommendation.",
     "Only five price/yield arithmetic examples use the supplied quote snapshot; other live prices are intentionally absent.",
     "Gross yields are not after-tax investor income and need account route, domicile and holding-period treatment."
-  ]
+  ],
+  "research_updates": [
+    {
+      "date": "2026-11-02",
+      "new_event_ids": [
+        "ct21_f",
+        "ct22_i",
+        "ct22_f",
+        "ct23_i",
+        "ct23_f",
+        "ct24_i",
+        "ct24_f"
+      ],
+      "new_source_count": 0,
+      "primary_source_rechecked": "ct",
+      "blocked_source": {
+        "source": "icbc25",
+        "http": 403,
+        "effect": "No new ICBC event inferred"
+      },
+      "interpretation": "Seven older H-share cash-calendar records added, not seven new dividends announced today. No historical signal or coverage approval."
+    }
+  ],
+  "last_research_update": "2026-11-02",
+  "source_date_policy": "Initial source collection date retained; see per-source last_reverified_date for selective later checks.",
+  "illustrative_quote_snapshot_as_of": "2026-10-30"
 }

@@ -191,7 +191,7 @@ def _metrics(histories: list[dict], trades: list[dict], capital: float) -> dict:
     days = max(1, (_date(histories[-1]["date"]) - _date(histories[0]["date"])).days + 1)
     log_growth = math.log(final / capital) * 365.25 / days
     # A one-day extreme sample cannot sensibly be annualized into finite JSON.
-    cagr = math.expm1(log_growth) if log_growth < 709 else None
+    cagr = math.expm1(log_growth) if len(histories) >= 30 and log_growth < 709 else None
     peak, drawdown = capital, 0.0
     for row in histories:
         peak = max(peak, row["equity"])
@@ -555,7 +555,8 @@ def build_report(dataset: dict, universe: dict, *, fee_rate: float | None = None
             "metrics": "Returns are decimal fractions; max drawdown is negative and includes "
             "initial "
             "costs; CAGR uses inclusive actual calendar days; mean exposure is mean daily "
-            "close stock weight; trade_count includes initial purchase. All comparisons "
+            "close stock weight; CAGR suppressed below 30 daily observations; "
+            "trade_count includes initial purchase. All comparisons "
             "use the same per-stock cost assumption. Cash earns zero interest.",
             "limitations": [
                 "Candidate universe is hand-chosen, not a point-in-time complete universe; "
