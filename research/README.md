@@ -46,6 +46,25 @@
 
 补充实验与逐行历史修订审计保存在私有日报的 `supplementary_experiments`，当日研究结论与下一项实验在 `daily_progress`。运行基础 `research.report` 后再附加这些内容，并保留补充实验原文件。股息公告读取失败时记录HTTP状态与缺口，不推断日期；各来源复核日期单独记录，不把一份来源复核写成全部来源已更新。
 
+## 整手与最低收费压力实验（2026-11-03）
+
+`research.friction_lab` 保留原波动候选池，另用未复权日K，在同一价格口径下比较4种模型：碎股比例费用、碎股加最低收费、整手比例费用、整手加最低收费。每只股票分别使用1000/10000/100000本币资金，全部8条固定规则都保留；HKD与USD资金不作跨币种汇总。最低收费情景设为每笔港币5元/美元1元，费用取比例费用与最低收费较高值，这不是券商费率表。
+
+整手采用当日接口静态资料，假设回测期间每手股数恒定；未核实历史每手股数变化、拆股、送股、配股或现金分红，不称为真实历史成交重建。信号也使用本实验未复权价格，除息跳空可能触发信号，因此不能把与前复权基准的差异全部归因于费用。所有单据向下取整，不扩大原来每次10%净值的订单以凑一手。无法按规则成交时报告零成交/现金闲置，不能把零收益当作策略优势。
+
+未复权与前复权缓存身份隔离。将 `universe.json` 的波动池复制到私有 `$researchRoot/universe-friction.json`，清空另外两个池，不增加证券代码；使用下文变量后运行：
+
+```powershell
+.\.venv\Scripts\python.exe -m research.collect --config "$researchRoot/client.json" --universe "$researchRoot/universe-friction.json" --cache "$researchRoot/cache" --output "$researchRoot/datasets/$researchDay-raw.json" --start 20250901 --adjust-type 0
+.\.venv\Scripts\python.exe -m research.friction_lab --raw "$researchRoot/datasets/$researchDay-raw.json" --wave "$researchRoot/experiments/$researchDay-wave.json" --universe research/universe.json --output "$researchRoot/experiments/$researchDay-friction.json"
+```
+
+2025-09-01起的数据给2025-11起点提供价格突破预热，本实验结束日固定2026-10-30，属于已查看的历史压力测试。趋势跟踪状态只在实际成交后切换；买入失败不能启动退出跟踪，退出失败保留持仓状态等待重试。已验证该修正不改变当前全部默认碎股历史/前向聚合结果；它修正的是新增整手/拒绝成交路径，原阈值和候选池保持不变。
+
+股息证据现有28份来源、32条部分事件。中国电信2026H1中报新增了一项历史覆盖观察：报告FCF口径为经营净现金流减资本开支，人民币289亿元FCF与归属该期利润的约146.96亿元已宣派中期股息静态相比约1.97倍。这不是上半年实际支付股息覆盖率，仍需核对租赁、营运资金、债务、全年季节性及压力资本开支；不构成分红安全性通过或买入信号。
+
+前向模拟每个市场分别报观察天数：11月3日晚港股有2个已完成交易日，美股有1个。不能把加入美股后的15代码均值与昨日仅5港股的均值直接当作当日收益变化。
+
 ## 本机运行
 
 在仓库根目录，Python3.11+：

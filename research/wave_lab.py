@@ -217,6 +217,7 @@ def simulate(
     end: str | date | None = None,
     fee_rate: float = 0.001,
     capital: float = 100000,
+    portfolio_factory=None,
 ) -> dict[str, Any]:
     """Use prior/current closes for signals, then fill at the next observed open.
 
@@ -235,7 +236,7 @@ def simulate(
     indices = [i for i, bar in enumerate(bars) if lower <= bar.date <= upper]
     if not indices:
         return {"status": "no_period_bars", "metrics": None, "histories": [], "trades": []}
-    portfolio = _Portfolio(capital, 0.0, fee_rate, [])
+    portfolio = (portfolio_factory or _Portfolio)(capital, 0.0, fee_rate, [])
     histories, signals = [], []
     first = bars[indices[0]]
     portfolio.execute(
@@ -255,6 +256,11 @@ def simulate(
             filled = portfolio.execute(bar, pending, bounded=variant not in BASELINES)
             if filled and variant.startswith("grid_"):
                 anchor = bar.open
+            if filled and variant == "trend_20_5":
+                if pending["reason"] == "prior_20_high_breakout":
+                    trend_active, trend_peak = True, None
+                elif pending["reason"] == "trailing_close_5_stop":
+                    trend_active, trend_peak = False, None
             pending = None
         if position and variant == "monthly_50":
             prior = bars[indices[position - 1]]
@@ -310,16 +316,15 @@ def simulate(
                         "signal_date": bar.date.isoformat(),
                         "reason": "trailing_close_5_stop",
                     }
-                    trend_active, trend_peak = False, None
             elif index >= 20 and bar.close > max(prior.high for prior in bars[index - 20 : index]):
                 pending = {
                     "target_weight": 0.8,
                     "signal_date": bar.date.isoformat(),
                     "reason": "prior_20_high_breakout",
                 }
-                # The allocation enters at the following open. Its first observed
-                # close, rather than a close before entry, starts the trailing peak.
-                trend_active, trend_peak = True, None
+                # State changes only when the next-open order actually fills;
+                # rejected entries cannot start a trailing exit, and rejected
+                # exits leave the existing trailing position active for retry.
         if pending:
             signals.append(dict(pending))
     return {

@@ -7,6 +7,32 @@ import pytest
 from research.collect import Collector, completed_end_date, date_windows, load_client_config
 
 
+def test_unadjusted_history_has_separate_cache_identity_and_upstream_adjust_type(tmp_path):
+    seen = []
+
+    def provider(req):
+        body = json.loads(req.content)["body"]
+        seen.append(body["adjust_type"])
+        return httpx.Response(
+            200,
+            json={
+                "code": 0,
+                "data": {
+                    "candlesticks": [{"timestamp": "1700000000", "open": "10", "close": "10"}]
+                },
+            },
+        )
+
+    with httpx.Client(transport=httpx.MockTransport(provider)) as client:
+        for adjust in (0, 1, 0, 1):
+            collector = Collector(
+                client, "https://example.com", tmp_path, pause=0, adjust_type=adjust
+            )
+            assert collector.history("BABA.US", "20231101", "20231130") is not None
+    assert seen == [0, 1]
+    assert len(list(tmp_path.glob("*.json"))) == 2
+
+
 def test_completed_dates_respect_market_close():
     now = datetime(2026, 11, 2, 12, 0, tzinfo=UTC)  # 20:00 Shanghai,07:00 New York
     assert completed_end_date("CN", now) == "20261102"

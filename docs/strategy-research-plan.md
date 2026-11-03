@@ -33,3 +33,7 @@ Initial verification: 71 tests and Ruff passed; independent review findings were
 ## 2026-11-02 stage
 
 Keep the universe and original forward rules fixed. Add training-only monthly exposure controls and explicitly retrospective mean-exposure-matched controls; report listing and issuer-balanced statistics separately. Suppress annualization below30 observations. Recheck China Telecom's original dividend-history page and add seven dated H-share historical cash events, without inventing announcement timestamps or FX. Preserve the private daily report, data revision audit and experiment provenance. Next: board-lot/minimum-fee sensitivity and announcement-time/sector coverage gaps.
+
+## 2026-11-03 stage
+
+Collect separate unadjusted history with isolated adjustment-basis cache identities. Retain all15 volatile listings and all8 fixed variants; run4 fee/lot scenarios at3 local-currency capitals (1440 simulations). Current lots and US1/HK5 minimum fees are explicit assumptions, not historical verified lots or actual broker tariffs. Disclose cash-only/zero-fill paths and the raw-price/corporate-action limitations. Fix trend state transitions on actual fills; prove existing default aggregates unchanged. Add China Telecom H1 issuer cash-coverage evidence without approving dividend safety. Separate forward observations by market/day count. Next: point-in-time lot/corporate-action verification, execution rejection diagnosis, and cash-flow/lease/debt reconciliation.

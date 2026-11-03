@@ -68,8 +68,11 @@ def save_json(path, value):
 
 
 class Collector:
-    def __init__(self, client, base_url, cache_dir, pause=0.6):
+    def __init__(self, client, base_url, cache_dir, pause=0.6, adjust_type=1):
+        if adjust_type not in (0, 1):
+            raise ValueError("adjust_type must be 0 (raw) or 1 (forward)")
         self.client, self.base_url, self.pause = client, base_url.rstrip("/"), pause
+        self.adjust_type = adjust_type
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.errors, self.requests, self.cache_hits = [], 0, 0
@@ -95,7 +98,7 @@ class Collector:
                 {
                     "symbol": symbol,
                     "period": 1000,
-                    "adjust_type": 1,
+                    "adjust_type": self.adjust_type,
                     "query_type": 2,
                     "date_request": {"start_date": begin_date, "end_date": end_date},
                 },
@@ -150,7 +153,8 @@ class Collector:
 
     def history(self, symbol, start, end):
         start, end = start.replace("-", ""), end.replace("-", "")
-        identity = hashlib.sha256((symbol + "-forward-day").encode()).hexdigest()[:20]
+        basis = "-forward-day" if self.adjust_type else "-unadjusted-day"
+        identity = hashlib.sha256((symbol + basis).encode()).hexdigest()[:20]
         path = self.cache_dir / (identity + ".json")
         cached = json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
         existing = []
@@ -213,6 +217,7 @@ def main():
     parser.add_argument("--start", default="20211101")
     parser.add_argument("--end")
     parser.add_argument("--max-symbols", type=int, default=40)
+    parser.add_argument("--adjust-type", type=int, choices=(0, 1), default=1)
     args = parser.parse_args()
     config = load_client_config(args.config)
     universe = json.loads(args.universe.read_text(encoding="utf-8"))
@@ -236,6 +241,7 @@ def main():
         "version": 1,
         "retrieved_at": now.isoformat(),
         "source": "139 Longbridge Router",
+        "adjust_type": args.adjust_type,
         "requested_start": args.start,
         "requested_end_by_market": end_by_market,
         "credential_expires_at": config["expires_at"],
@@ -259,9 +265,11 @@ def main():
         state = status.json()["data"]
         if state["paused"] or not state["oauth"]["authorized"]:
             raise SystemExit("Research gateway is paused or requires owner OAuth authorization")
-        collector = Collector(client, config["base_url"], args.cache)
+        collector = Collector(client, config["base_url"], args.cache, adjust_type=args.adjust_type)
         for market in ("CN", "HK", "US"):
             group = [s for s in symbols if market_of(s) == market]
+            if not group:
+                continue
             result["indexes"][market] = collector.request(
                 market,
                 "/quote/calc-indexes",
