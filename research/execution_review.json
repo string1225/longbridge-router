@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-04",
+  "scope": "Primary-source lot anchors only; no trading signals or complete historical corporate-action reconstruction.",
+  "complete_point_in_time_lot_history": false,
+  "sources": {
+    "tencent2014": {
+      "url": "https://static.www.tencent.com/storage/uploads/2019/11/09/283cf1d5fd0160fe1bd134b487eedea7.pdf",
+      "document_date": "2014-03-19",
+      "kind": "issuer_share_subdivision_proposal",
+      "read": "original_pdf_text_pages1_2_9",
+      "limitation": "Proposal and indicative timetable do not prove approval or effective implementation."
+    },
+    "xiaomi2023": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0606/2023060601509.pdf",
+      "document_date": "2023-06-06",
+      "kind": "issuer_RMB_counter_announcement",
+      "read": "full_primary_single_page",
+      "limitation": "Declared counter launch date does not establish a complete later lot-change ledger."
+    },
+    "alibaba2024": {
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2024/0523/2024052301569.pdf",
+      "document_date": "2024-05-23",
+      "kind": "issuer_annual_report",
+      "read": "indexed_primary_relevant_section_page170",
+      "limitation": "A report-date statement is a historical anchor, not continuous-period verification."
+    },
+    "alibaba2026": {
+      "url": "https://data.alibabagroup.com/ir_filings/SEC/BABA/000119312526231755/baba-20260331.htm",
+      "fiscal_year_end": "2026-03-31",
+      "publication_timestamp": null,
+      "kind": "issuer_hosted_form20F",
+      "read": "primary_HTML_dealings_and_settlement_section",
+      "limitation": "Fiscal year-end is not assumed to be the publication date or a lot-change effective date."
+    }
+  },
+  "anchors": [
+    {
+      "symbol": "700.HK",
+      "source": "tencent2014",
+      "stated_current_lot": 100,
+      "proposal": "One existing share into five subdivided shares, with ordinary board lot intended to remain100; subject to approval and listing conditions.",
+      "later_continuity_verified": false
+    },
+    {
+      "symbol": "1810.HK",
+      "source": "xiaomi2023",
+      "stated_lot": 200,
+      "scope": "HKD01810 and RMB81810 ClassB counters; declared launch19June2023.",
+      "later_continuity_verified": false
+    },
+    {
+      "symbol": "9988.HK",
+      "sources": ["alibaba2024", "alibaba2026"],
+      "stated_lot": 100,
+      "scope": "Hong Kong ordinary shares; two report anchors do not rule out intervening changes.",
+      "later_continuity_verified": false
+    }
+  ],
+  "methodology": {
+    "half_initial_allocation": "At priceP and lotL, with N=P*L and feeF=max(rate*N,minimum), capitalC must satisfy C>=2N+F to buy one lot without exceeding the post-fee50% target. Model has no actual broker fee rounding.",
+    "ten_percent_order": "Signal NAV must be at least10 times the next-open one-lot notional for an intended10%-NAV order to reach one lot. Cash, position bounds and overnight gaps can impose additional restrictions.",
+    "interpretation": "Ability to open a position does not imply ability to execute later grid orders. Do not round intended orders upward without defining and separately validating a new sizing protocol."
+  },
+  "remaining_gaps": [
+    "No full2025-11..2026-10 lot-change, split, bonus, rights or distribution ledger is verified.",
+    "The Meituan and Kuaishou lot assumptions still rely on gateway current snapshots.",
+    "No historical actual broker tariff, tax, FX or corporate-action cash accounting reconstructed.",
+    "Do not treat proposals as implemented actions or old anchors as proof that no later changes occurred."
+  ]
+}

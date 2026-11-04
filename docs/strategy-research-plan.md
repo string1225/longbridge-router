@@ -37,3 +37,7 @@ Keep the universe and original forward rules fixed. Add training-only monthly ex
 ## 2026-11-03 stage
 
 Collect separate unadjusted history with isolated adjustment-basis cache identities. Retain all15 volatile listings and all8 fixed variants; run4 fee/lot scenarios at3 local-currency capitals (1440 simulations). Current lots and US1/HK5 minimum fees are explicit assumptions, not historical verified lots or actual broker tariffs. Disclose cash-only/zero-fill paths and the raw-price/corporate-action limitations. Fix trend state transitions on actual fills; prove existing default aggregates unchanged. Add China Telecom H1 issuer cash-coverage evidence without approving dividend safety. Separate forward observations by market/day count. Next: point-in-time lot/corporate-action verification, execution rejection diagnosis, and cash-flow/lease/debt reconciliation.
+
+## 2026-11-04 stage
+
+Keep engine, signals and universe unchanged. Reuse the saved raw experiment to replay360 diagnostic paths with identical metrics and60 actual-execution boundary checks; distinguish initial50% affordability from subsequent10% order intent. Gather partial primary lot anchors for Tencent/Xiaomi/Alibaba without claiming complete continuity or proposal implementation. Read and visually verify original China Telecom cash-flow pages48/49, preserving management/cash-CAPEX, lease, working-capital and dividend-timing gaps. Next: complete corporate-action/lot-change chains and define an executable sizing protocol before further forward validation.
