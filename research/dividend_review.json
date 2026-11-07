@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-06 Asia/Shanghai",
+  "as_of": "2026-11-07 Asia/Shanghai",
   "scope": "Dividend research evidence only. No broker orders, credentials, operational API calls or performance claims.",
   "source_retrieved_date": "2026-11-01",
   "universe": {
@@ -225,6 +225,20 @@
       ],
       "sha256_on_retrieval": "55cb3753feffa6104bd288dc6d5ed5e56b91e794f8dfe7dd2df001e9bcb7e634",
       "limit": "Partial source-page review. Capital buffers are not distributable cash; later shareholder approval and payments not inferred."
+    },
+    "ccb26_h1_report": {
+      "url": "https://en.ccb.com/eng/attachDir/2026/09/2026092817481924749.pdf",
+      "kind": "issuer_IFRS_interim_report",
+      "read": "original_relevant_page_text_and_visual_verified",
+      "publication_date": "2026-09-28",
+      "last_reverified_date": "2026-11-07",
+      "printed_pages_checked": [
+        98
+      ],
+      "pdf_page_checked": 100,
+      "note": "14 Earnings per share",
+      "sha256_on_retrieval": "818859ab38e5edc284b4b053490e8b0672dc39f2c51aecd0e95abfdab028c39f",
+      "limit": "EPS profit bridge verified only. Amount attributed to other equity instruments is an EPS-period adjustment, not independently verified cash coupons paid. No shareholder approval, cash calendar or stress safety inferred."
     }
   },
   "candidates": [
@@ -508,7 +522,8 @@
         "ccb26_h1_release",
         "ccb26_q3_release",
         "ccb26_q3_pillar",
-        "ccb26_interim_proposal"
+        "ccb26_interim_proposal",
+        "ccb26_h1_report"
       ],
       "quality_decision": "research_only_coverage_and_history_incomplete",
       "confirmed_facts": [
@@ -516,13 +531,15 @@
         "2026H1 issuer release proposes ordinary interim RMB0.2010/share gross, approximately RMB52.582bn and reported payout31.0%; to be submitted to shareholders. Later approval/payment not reverified.",
         "2026Q3 issuer release: CET1 14.39%, total capital19.55%, NPL1.29%, allowance/NPL233.21%, NIM1.36%; H1 comparative14.24%,19.42%,1.29%,238.69%,1.37%.",
         "2026-11-06 original Q3 Pillar3 KM1 printedp2 visually verified: CET1 RMB3,671,581m, RWA25,522,363m, CET1 ratio14.39%; conservation2.50%, countercyclical0.00%, systemic1.50%, total additional requirements4.00%; CET1 available after minimum capital requirements9.39%.",
-        "Original interim proposal2026-032 pp1/2: distributionRMB52.582bn versus bank-shareholder-attributable H1 profit169.564bn, reported payout31.0%; board-approved28Aug2026, shareholder deliberation still required in that document."
+        "Original interim proposal2026-032 pp1/2: distributionRMB52.582bn versus bank-shareholder-attributable H1 profit169.564bn, reported payout31.0%; board-approved28Aug2026, shareholder deliberation still required in that document.",
+        "2026-11-07 original IFRS H1 note14 printedp98 visually verified: bank-equity shareholder profitRMB169,564m less other-equity-instrument-holder profit796m equals ordinary-shareholder profit168,768m; weighted average ordinary shares261,600m, basic/diluted EPS0.65."
       ],
       "inferences": [
         "FY2025 per-share dividend fell3.5484%; changes in share count can affect DPS even if total distributions hold up.",
         "Proposed comparable interim DPS rises8.1808% from0.1858; this is not an annual sustainable-growth estimate. Latest complete FY base remains0.3887.",
         "Q3 versusH1 CET1 +0.15pp, allowance/NPL -5.48pp and NIM -0.01pp require capital/asset-quality stress review; no approval inferred.",
-        "Pillar3 row12 of9.39% is a regulatory ratio, not a distributable cash amount or independently verified dividend headroom. Do not equate it with a stress-safe payout."
+        "Pillar3 row12 of9.39% is a regulatory ratio, not a distributable cash amount or independently verified dividend headroom. Do not equate it with a stress-safe payout.",
+        "Proposed ordinary distribution52,582m divided by note14 ordinary-profit168,768m is31.1564%, a separately labelled accounting sensitivity. Keep issuer-reported31.0% on its stated bank-shareholder profit denominator; this is not actual cash paid, regulatory headroom or a safety approval."
       ],
       "flags": [
         "annual_per_share_dividend_cut"
@@ -536,13 +553,13 @@
         "H-share ex dates and original announcement times",
         "H-share FX settlement per installment",
         "Disclosed Q3 buffers now verified; institution-specific Pillar2/management targets, stress losses and distributable headroom still unresolved",
-        "Ordinary-share attributable profit after preferred/AT1 claims and share-count changes versus payout denominator",
+        "H1 EPS ordinary-profit bridge now verified; other-equity instrument cash-payment timing, full-year profit/share-count and stress distribution capacity remain unverified",
         "Stage2/credit migration, provision adequacy and capital issuance under stress",
         "Later shareholder approval and listing-specific ex/record/pay dates, H-share FX and withholding tax"
       ],
       "coverage_review": {
         "status": "partial_historical_evidence_not_approved",
-        "as_of": "2026-11-06",
+        "as_of": "2026-11-07",
         "latest_period": "2026Q3",
         "not_bank_FCF_gate": true,
         "H1_percent": {
@@ -575,18 +592,19 @@
           "comparable_interim_growth": 0.08180839612486546,
           "source": "ccb26_interim_proposal",
           "issuer_payout_denominator_CNY_billion": 169.564,
-          "denominator_description": "Profit attributable to shareholders of the Bank as stated in proposal; ordinary-share profit after other equity claims not independently bridged",
+          "denominator_description": "Issuer proposal uses profit attributable to Bank shareholders169.564bn. IFRS note14 separately bridges to ordinary profit168.768bn after0.796bn other-equity-period profit; keep both labelled bases.",
           "arithmetic_ratio_from_rounded_amounts": 0.3101012007265693
         },
         "sources": [
           "ccb26_h1_release",
           "ccb26_q3_release",
           "ccb26_q3_pillar",
-          "ccb26_interim_proposal"
+          "ccb26_interim_proposal",
+          "ccb26_h1_report"
         ],
         "unresolved": [
           "Disclosed Q3 buffers now verified; institution-specific Pillar2/management targets, stress losses and distributable headroom still unresolved",
-          "Ordinary-share attributable profit after preferred/AT1 claims and share-count changes versus payout denominator",
+          "H1 EPS ordinary-profit bridge now verified; other-equity instrument cash-payment timing, full-year profit/share-count and stress distribution capacity remain unverified",
           "Stage2/credit migration, provision adequacy and capital issuance under stress",
           "Later shareholder approval and listing-specific ex/record/pay dates, H-share FX and withholding tax"
         ],
@@ -605,6 +623,25 @@
           "total_additional_requirements_percent": 4.0,
           "CET1_available_after_minimum_requirements_percent": 9.39,
           "not_distributable_cash_or_stress_clearance": true
+        },
+        "ordinary_profit_bridge": {
+          "period": "2026H1",
+          "accounting_basis": "IFRS",
+          "source": "ccb26_h1_report",
+          "printed_page": 98,
+          "note": 14,
+          "currency": "CNY",
+          "unit": "million",
+          "profit_attributable_bank_equity_shareholders": 169564,
+          "other_equity_holder_period_profit_deduction": 796,
+          "profit_attributable_ordinary_shareholders": 168768,
+          "weighted_average_ordinary_shares_million": 261600,
+          "reported_EPS": 0.65,
+          "proposed_ordinary_distribution": 52582,
+          "proposed_distribution_over_ordinary_profit": 0.3115638035646568,
+          "proposed_distribution_over_issuer_stated_denominator": 0.3101012007265693,
+          "issuer_reported_payout_ratio": 0.31,
+          "not_verified_cash_paid_or_safety_pass": true
         }
       }
     },
@@ -696,7 +733,8 @@
         "ccb26_h1_release",
         "ccb26_q3_release",
         "ccb26_q3_pillar",
-        "ccb26_interim_proposal"
+        "ccb26_interim_proposal",
+        "ccb26_h1_report"
       ],
       "quality_decision": "research_only_coverage_and_history_incomplete",
       "confirmed_facts": [
@@ -704,13 +742,15 @@
         "2026H1 issuer release proposes ordinary interim RMB0.2010/share gross, approximately RMB52.582bn and reported payout31.0%; to be submitted to shareholders. Later approval/payment not reverified.",
         "2026Q3 issuer release: CET1 14.39%, total capital19.55%, NPL1.29%, allowance/NPL233.21%, NIM1.36%; H1 comparative14.24%,19.42%,1.29%,238.69%,1.37%.",
         "2026-11-06 original Q3 Pillar3 KM1 printedp2 visually verified: CET1 RMB3,671,581m, RWA25,522,363m, CET1 ratio14.39%; conservation2.50%, countercyclical0.00%, systemic1.50%, total additional requirements4.00%; CET1 available after minimum capital requirements9.39%.",
-        "Original interim proposal2026-032 pp1/2: distributionRMB52.582bn versus bank-shareholder-attributable H1 profit169.564bn, reported payout31.0%; board-approved28Aug2026, shareholder deliberation still required in that document."
+        "Original interim proposal2026-032 pp1/2: distributionRMB52.582bn versus bank-shareholder-attributable H1 profit169.564bn, reported payout31.0%; board-approved28Aug2026, shareholder deliberation still required in that document.",
+        "2026-11-07 original IFRS H1 note14 printedp98 visually verified: bank-equity shareholder profitRMB169,564m less other-equity-instrument-holder profit796m equals ordinary-shareholder profit168,768m; weighted average ordinary shares261,600m, basic/diluted EPS0.65."
       ],
       "inferences": [
         "Same per-share cut3.5484% as H shares; do not duplicate issuer diversification across two listings.",
         "Proposed comparable interim DPS rises8.1808% from0.1858; this is not an annual sustainable-growth estimate. Latest complete FY base remains0.3887.",
         "Q3 versusH1 CET1 +0.15pp, allowance/NPL -5.48pp and NIM -0.01pp require capital/asset-quality stress review; no approval inferred.",
-        "Pillar3 row12 of9.39% is a regulatory ratio, not a distributable cash amount or independently verified dividend headroom. Do not equate it with a stress-safe payout."
+        "Pillar3 row12 of9.39% is a regulatory ratio, not a distributable cash amount or independently verified dividend headroom. Do not equate it with a stress-safe payout.",
+        "Proposed ordinary distribution52,582m divided by note14 ordinary-profit168,768m is31.1564%, a separately labelled accounting sensitivity. Keep issuer-reported31.0% on its stated bank-shareholder profit denominator; this is not actual cash paid, regulatory headroom or a safety approval."
       ],
       "flags": [
         "annual_per_share_dividend_cut"
@@ -723,13 +763,13 @@
       "missing": [
         "original announcement/ex-date implementation forms",
         "Disclosed Q3 buffers now verified; institution-specific Pillar2/management targets, stress losses and distributable headroom still unresolved",
-        "Ordinary-share attributable profit after preferred/AT1 claims and share-count changes versus payout denominator",
+        "H1 EPS ordinary-profit bridge now verified; other-equity instrument cash-payment timing, full-year profit/share-count and stress distribution capacity remain unverified",
         "Stage2/credit migration, provision adequacy and capital issuance under stress",
         "Later shareholder approval and listing-specific ex/record/pay dates, H-share FX and withholding tax"
       ],
       "coverage_review": {
         "status": "partial_historical_evidence_not_approved",
-        "as_of": "2026-11-06",
+        "as_of": "2026-11-07",
         "latest_period": "2026Q3",
         "not_bank_FCF_gate": true,
         "H1_percent": {
@@ -762,18 +802,19 @@
           "comparable_interim_growth": 0.08180839612486546,
           "source": "ccb26_interim_proposal",
           "issuer_payout_denominator_CNY_billion": 169.564,
-          "denominator_description": "Profit attributable to shareholders of the Bank as stated in proposal; ordinary-share profit after other equity claims not independently bridged",
+          "denominator_description": "Issuer proposal uses profit attributable to Bank shareholders169.564bn. IFRS note14 separately bridges to ordinary profit168.768bn after0.796bn other-equity-period profit; keep both labelled bases.",
           "arithmetic_ratio_from_rounded_amounts": 0.3101012007265693
         },
         "sources": [
           "ccb26_h1_release",
           "ccb26_q3_release",
           "ccb26_q3_pillar",
-          "ccb26_interim_proposal"
+          "ccb26_interim_proposal",
+          "ccb26_h1_report"
         ],
         "unresolved": [
           "Disclosed Q3 buffers now verified; institution-specific Pillar2/management targets, stress losses and distributable headroom still unresolved",
-          "Ordinary-share attributable profit after preferred/AT1 claims and share-count changes versus payout denominator",
+          "H1 EPS ordinary-profit bridge now verified; other-equity instrument cash-payment timing, full-year profit/share-count and stress distribution capacity remain unverified",
           "Stage2/credit migration, provision adequacy and capital issuance under stress",
           "Later shareholder approval and listing-specific ex/record/pay dates, H-share FX and withholding tax"
         ],
@@ -792,6 +833,25 @@
           "total_additional_requirements_percent": 4.0,
           "CET1_available_after_minimum_requirements_percent": 9.39,
           "not_distributable_cash_or_stress_clearance": true
+        },
+        "ordinary_profit_bridge": {
+          "period": "2026H1",
+          "accounting_basis": "IFRS",
+          "source": "ccb26_h1_report",
+          "printed_page": 98,
+          "note": 14,
+          "currency": "CNY",
+          "unit": "million",
+          "profit_attributable_bank_equity_shareholders": 169564,
+          "other_equity_holder_period_profit_deduction": 796,
+          "profit_attributable_ordinary_shareholders": 168768,
+          "weighted_average_ordinary_shares_million": 261600,
+          "reported_EPS": 0.65,
+          "proposed_ordinary_distribution": 52582,
+          "proposed_distribution_over_ordinary_profit": 0.3115638035646568,
+          "proposed_distribution_over_issuer_stated_denominator": 0.3101012007265693,
+          "issuer_reported_payout_ratio": 0.31,
+          "not_verified_cash_paid_or_safety_pass": true
         }
       }
     },
@@ -2040,9 +2100,23 @@
         ]
       },
       "interpretation": "Verified Q3 buffers/KM1 and the issuer-stated H1 payout denominator directly in original PDF pages. Dividend proposal still requires shareholder approval in the reviewed document; no complete approval/calendar/safety evidence or dividend backtest."
+    },
+    {
+      "date": "2026-11-07",
+      "new_source_ids": [
+        "ccb26_h1_report"
+      ],
+      "new_event_ids": [],
+      "revised_event_ids": [],
+      "original_pages_checked": {
+        "ccb26_h1_report": [
+          98
+        ]
+      },
+      "interpretation": "Verified ordinary-profit denominator bridge for the existing H1 proposal; do not modify issuer-reported31.0%, infer cash coupon timing, promote board proposal to shareholder-approved/paid, or approve dividend safety."
     }
   ],
-  "last_research_update": "2026-11-06",
+  "last_research_update": "2026-11-07",
   "source_date_policy": "Initial source collection date retained; see per-source last_reverified_date for selective later checks.",
   "illustrative_quote_snapshot_as_of": "2026-10-30"
 }
