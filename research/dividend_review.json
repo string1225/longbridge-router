@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-08 Asia/Shanghai",
+  "as_of": "2026-11-09 Asia/Shanghai",
   "scope": "Dividend research evidence only. No broker orders, credentials, operational API calls or performance claims.",
   "source_retrieved_date": "2026-11-01",
   "universe": {
@@ -40,6 +40,14 @@
       "kind": "exchange_news_relay",
       "read": "primary_indexed_extract",
       "limit": "Confirms RMB2.51 interim; not the original HK cash distribution form."
+    },
+    "ct25_notes": {
+      "url": "https://www.chinatelecom-h.com/en/ir/report/annual2025/annual2025_19.pdf",
+      "kind": "issuer_IFRS_annual_report_note37",
+      "read": "original_pdf_printed217_pdf62_text_and_visual",
+      "last_reverified_date": "2026-11-09",
+      "sha256": "d6f30603ce404997eac8da2159db13e4a829afc9b1eb8ff90f327cb432d6ec28",
+      "limit": "Issuer-reported historical payment, not investor account receipt. Board proposal date is not verified original publication timing. Note37 amounts are in RMB; do not call them HKD cash totals."
     },
     "ct25_i_h_form": {
       "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0814/2025081400749.pdf",
@@ -311,7 +319,8 @@
         "ct",
         "ct26_ir",
         "ct25_i_h_form",
-        "ct25_f_h_fx"
+        "ct25_f_h_fx",
+        "ct25_notes"
       ],
       "quality_decision": "research_only_coverage_and_history_incomplete",
       "confirmed_facts": [
@@ -319,6 +328,8 @@
         "FY2026 interim is0.1606, below FY2025 interim0.1812.",
         "2026-11-02 rechecked issuer H-share history: FY2021 final through FY2026 interim have ten ex/payment-date records; most original publication timestamps and older HKD conversions remain missing.",
         "2026-11-08 verified original HKEX FY2025 H forms: interim HKD0.199264 at RMB1:HKD1.099691; final HKD0.103910 at RMB1:HKD1.144387. May19 final form is an FX update and confirms shareholder approval, not original declaration timing or proof of payment.",
+        "2026-11-09 visually verified FY2025 IFRS note37 printedp217: FY2025 interim distributionRMB2,514m reported paid30Sep2025; FY2024 finalRMB1,214m reported paid18Jul2025 with HKD0.100637 equivalent and21May2025 shareholder approval. Payment dates match the existing H-share events; note37 does not explicitly label each tranche A/H.",
+        "Note37 confirms FY2025 final board proposal24Mar2026, not original public-announcement timing. The reviewed annual note cannot confirm payment of this later final distribution.",
         "2026H1 issuer report: FCF RMB28.9bn, CAPEX RMB32.4bn, interim distribution approximately RMB14.696bn /75% of attributable profit; board approval20Aug2026, DPS RMB0.1606 equivalent HKD0.185633 as stated in report.",
         "2026-11-04 original interim report pp48/49: CFO RMB61.375bn, cash CAPEX26.354bn, lease-principal financing outflow3.915bn, cash dividends paid7.105bn; accounts-payable cash effect4.686bn versus priorH1 -8.592bn."
       ],
@@ -354,8 +365,8 @@
         "known_cut_requires_review": true
       },
       "missing": [
-        "original publication times and older declaration dates, including original FY2025 final proposal",
-        "older HKD settlement conversions and actual payment confirmations",
+        "original publication times and older declaration dates, including first public disclosure of FY2025 final proposal; its board date is now known",
+        "older HKD settlement conversions, remaining actual payments including FY2025 final, and investor-level receipt/tax",
         "management/cash CAPEX bridge and lease treatment",
         "working-capital sustainability, debt and full-year downside coverage"
       ],
@@ -1209,9 +1220,18 @@
       "record_date": "2025-09-03",
       "payment_date": "2025-09-30",
       "listing": "H",
-      "status": "declared_scheduled_payment_not_independently_confirmed_paid",
+      "status": "issuer_annual_report_says_paid_not_investor_receipt_proof",
       "source": "ct25_i_h_form",
       "prior_source": "ct",
+      "supplementary_source": "ct25_notes",
+      "payment_confirmation": {
+        "type": "issuer_reported_paid_in_later_annual_note",
+        "date": "2025-09-30",
+        "reported_total_CNY_million": 2514,
+        "source": "ct25_notes",
+        "listing_mapping": "Date matches verified H dividend form; note37 itself does not label tranche A/H.",
+        "investor_receipt_verified": false
+      },
       "approval_requirement": "shareholder_approval_not_applicable_in_original_form",
       "settlement": {
         "currency": "HKD",
@@ -1240,6 +1260,8 @@
       "source": "ct25_f_h_fx",
       "prior_source": "ct",
       "update_announcement_date": "2026-05-19",
+      "board_proposal_date": "2026-03-24",
+      "board_proposal_source": "ct25_notes",
       "update_reason": "HKD payment amount and FX; original announcement_date remains unverified",
       "settlement": {
         "currency": "HKD",
@@ -1722,13 +1744,28 @@
       "nature": "ordinary",
       "nature_basis": "Regular interim/final in issuer dividend history; original announcement review pending",
       "announcement_date": null,
-      "approval_date": null,
+      "approval_date": "2025-05-21",
       "ex_date": "2025-06-03",
       "record_date": null,
       "payment_date": "2025-07-18",
       "listing": "H",
-      "status": "issuer_history_record",
+      "status": "issuer_annual_report_says_paid_not_investor_receipt_proof",
       "source": "ct",
+      "supplementary_source": "ct25_notes",
+      "settlement": {
+        "currency": "HKD",
+        "gross_per_share": 0.100637,
+        "source": "ct25_notes",
+        "original_FX_publication_date": null
+      },
+      "payment_confirmation": {
+        "type": "issuer_reported_paid_in_later_annual_note",
+        "date": "2025-07-18",
+        "reported_total_CNY_million": 1214,
+        "source": "ct25_notes",
+        "listing_mapping": "Date matches issuer H-share calendar; note37 itself does not label tranche A/H.",
+        "investor_receipt_verified": false
+      },
       "first_seen_date": "2026-11-02",
       "publication_timestamp": null
     },
@@ -2174,9 +2211,17 @@
       "revised_event_ids": ["ct25_i", "ct25_f"],
       "original_pdf_pages_checked": {"ct25_i_h_form": [1], "ct25_f_h_fx": [1]},
       "interpretation": "Reconcile FY2025 H-share settlement equivalent HKD0.303174 from two installment-specific conversions. Preserve ordinary declared CNY0.272, known FY2026 interim cut, original-final announcement gap and scheduled/paid distinction. No safety approval or dividend backtest."
+    },
+    {
+      "date": "2026-11-09",
+      "new_source_ids": ["ct25_notes"],
+      "new_event_ids": [],
+      "revised_event_ids": ["ct24_f", "ct25_i", "ct25_f"],
+      "original_pages_checked": {"ct25_notes": [217]},
+      "interpretation": "Annual note37 provides issuer-reported paid evidence for two existing H-calendar-matched events and FY2025 final board proposal date. It does not verify investor receipts, FY2025 final cash payment or original proposal publication timing. Annual DPS and safety status unchanged."
     }
   ],
-  "last_research_update": "2026-11-08",
+  "last_research_update": "2026-11-09",
   "source_date_policy": "Initial source collection date retained; see per-source last_reverified_date for selective later checks.",
   "illustrative_quote_snapshot_as_of": "2026-10-30"
 }
