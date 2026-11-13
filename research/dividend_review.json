@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-12 Asia/Shanghai",
+  "as_of": "2026-11-13 Asia/Shanghai",
   "scope": "Dividend research evidence only. No broker orders, credentials, operational API calls or performance claims.",
   "source_retrieved_date": "2026-11-01",
   "universe": {
@@ -72,11 +72,12 @@
     },
     "ct25_notes": {
       "url": "https://www.chinatelecom-h.com/en/ir/report/annual2025/annual2025_19.pdf",
-      "kind": "issuer_IFRS_annual_report_note37",
-      "read": "original_pdf_printed217_pdf62_text_and_visual",
-      "last_reverified_date": "2026-11-09",
+      "kind": "issuer_IFRS_annual_report_notes37_39",
+      "read": "original_pdf_printed217_pdf62_and_printed218_pdf63_text_and_visual",
+      "last_reverified_date": "2026-11-13",
+      "reviewed_printed_pages": [217, 218],
       "sha256": "d6f30603ce404997eac8da2159db13e4a829afc9b1eb8ff90f327cb432d6ec28",
-      "limit": "Issuer-reported historical payment, not investor account receipt. Board proposal date is not verified original publication timing. Note37 amounts are in RMB; do not call them HKD cash totals."
+      "limit": "Issuer-reported historical payment, not investor account receipt. Board proposal date is not verified original publication timing. Note37 amounts are in RMB, not HKD cash totals. Note39 capital commitments are contracted-for/not-provided balances at2025/2024 year ends, not cash already spent, a2026 payment forecast or new FY2024 interim payment confirmation."
     },
     "ct25_i_h_form": {
       "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0814/2025081400749.pdf",
@@ -367,6 +368,7 @@
         "2026H1 issuer report: FCF RMB28.9bn, CAPEX RMB32.4bn, interim distribution approximately RMB14.696bn /75% of attributable profit; board approval20Aug2026, DPS RMB0.1606 equivalent HKD0.185633 as stated in report.",
         "2026-11-11 visually verified issuer-linked original20Aug2026 ordinary interim form: CNY0.1606, HKD0.185633, explicitly stated RMB1:HKD1.155869; ex2Sep, record9Sep, scheduled payment13Oct2026. Shareholder approval not applicable; no actual payment or investor receipt confirmation from this form.",
         "2026-11-12 visually verified original20Aug2024 ordinary interim form: CNY0.1671, HKD0.182289 at stated RMB1:HKD1.090898, ex3Sep/record10Sep/scheduled payment18Oct2024. Original announcement date and FX now verified; board/publication timestamp/payment confirmation remain separate and incomplete.",
+        "2026-11-13 verified cached FY2025 original note39 printedp218: contracted-for/not-provided capital commitments at31Dec2025 were RMB16,771m (property2,193m plus network plant/equipment14,578m), versus20,226m at31Dec2024. These are historical stock balances, not actual cash spending or a2026 forecast; timing/reconciliation remains unresolved.",
         "2026-11-04 original interim report pp48/49: CFO RMB61.375bn, cash CAPEX26.354bn, lease-principal financing outflow3.915bn, cash dividends paid7.105bn; accounts-payable cash effect4.686bn versus priorH1 -8.592bn."
       ],
       "inferences": [
@@ -404,10 +406,26 @@
         "original intraday publication times, older declaration dates and complete intermediate version chain; FY2025 final initial date now verified",
         "older HKD settlement conversions, remaining older/2026 interim payments and investor-level receipt/tax",
         "management/cash CAPEX bridge and lease treatment",
-        "working-capital sustainability, debt and full-year downside coverage"
+        "working-capital sustainability, debt and full-year downside coverage; reconcile historical year-end capital commitments with2026 cash payments and management/cash CAPEX"
       ],
       "coverage_review": {
         "status": "partial_historical_evidence_not_approved",
+        "historical_capital_commitment_context": {
+          "verified_on": "2026-11-13",
+          "source": "ct25_notes",
+          "printed_page": 218,
+          "balance_date": "2025-12-31",
+          "comparison_date": "2024-12-31",
+          "currency_unit": "CNY_million",
+          "basis": "contracted_for_but_not_provided_capital_commitments",
+          "property_2025": 2193,
+          "network_plant_equipment_2025": 14578,
+          "total_2025": 16771,
+          "property_2024": 3214,
+          "network_plant_equipment_2024": 17012,
+          "total_2024": 20226,
+          "limit": "Historical balance, not paid cash or incremental2026 outflow forecast. Payment schedule, overlap with management/cash CAPEX and subsequent changes unknown. No new dividend payment confirmation or coverage approval."
+        },
         "period": "2026H1",
         "currency": "CNY",
         "FCF_billion": 28.9,
@@ -2326,9 +2344,19 @@
       "revised_event_ids": ["ct24_i"],
       "original_pdf_pages_checked": {"ct24_i_h_form": [1]},
       "interpretation": "Original FY2024 interim form fills one older declaration/register/FX gap and explicitly confirms ordinary nature. Original announcement date known, intraday time/board approval/payment still not verified here. Annual-report download failed, so search excerpts are not used to upgrade this event to paid. FY2025 reference DPS and coverage/backtest status unchanged."
+    },
+    {
+      "date": "2026-11-13",
+      "new_source_ids": [],
+      "new_event_ids": [],
+      "revised_event_ids": [],
+      "rechecked_source": "ct25_notes",
+      "new_original_pages": [218],
+      "candidate_reviews_updated": ["728.HK"],
+      "interpretation": "Newly verified historical note39 capital-commitment context on a cached primary PDF. Rechecked note37 does not confirm FY2024 interim payment; event status stays unchanged. Do not add contracted-for balances to2026 cash CAPEX or infer distributable cash from the comparative decline. Safety/history/backtest gaps remain."
     }
   ],
-  "last_research_update": "2026-11-12",
+  "last_research_update": "2026-11-13",
   "source_date_policy": "Initial source collection date retained; see per-source last_reverified_date for selective later checks.",
   "illustrative_quote_snapshot_as_of": "2026-10-30"
 }
