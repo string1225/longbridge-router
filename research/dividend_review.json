@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-13 Asia/Shanghai",
+  "as_of": "2026-11-14 Asia/Shanghai",
   "scope": "Dividend research evidence only. No broker orders, credentials, operational API calls or performance claims.",
   "source_retrieved_date": "2026-11-01",
   "universe": {
@@ -225,7 +225,7 @@
     "ct26_ir": {
       "url": "https://www.chinatelecom-h.com/en/ir/report/interim2026.pdf",
       "kind": "issuer_interim_report",
-      "read": "original_pdf_relevant_pages_text_extracted_and_cashflow_tables_visually_checked",
+      "read": "original_pdf_relevant_pages_text_and_cashflow_note19_note21_tables_visually_checked",
       "first_seen_date": "2026-11-03",
       "reporting_period_end": "2026-06-30",
       "pages": [
@@ -235,8 +235,8 @@
         49,
         63
       ],
-      "limit": "Relevant original pages verified; publication timestamp and full management-CAPEX/cash-CAPEX bridge remain unresolved.",
-      "last_reverified_date": "2026-11-10",
+      "limit": "Relevant original pages verified; publication timestamp, full management/cash-CAPEX bridge and capital-commitment cash-flow roll-forward remain unresolved. Contracted balances are not actual payments or incremental cash forecasts.",
+      "last_reverified_date": "2026-11-14",
       "sha256_on_retrieval": "354b086e932232289c31aed607c0f193b7ff383c42b514d7abf5fcc1f79dbfcf"
     },
     "ccb26_h1_release": {
@@ -369,6 +369,7 @@
         "2026-11-11 visually verified issuer-linked original20Aug2026 ordinary interim form: CNY0.1606, HKD0.185633, explicitly stated RMB1:HKD1.155869; ex2Sep, record9Sep, scheduled payment13Oct2026. Shareholder approval not applicable; no actual payment or investor receipt confirmation from this form.",
         "2026-11-12 visually verified original20Aug2024 ordinary interim form: CNY0.1671, HKD0.182289 at stated RMB1:HKD1.090898, ex3Sep/record10Sep/scheduled payment18Oct2024. Original announcement date and FX now verified; board/publication timestamp/payment confirmation remain separate and incomplete.",
         "2026-11-13 verified cached FY2025 original note39 printedp218: contracted-for/not-provided capital commitments at31Dec2025 were RMB16,771m (property2,193m plus network plant/equipment14,578m), versus20,226m at31Dec2024. These are historical stock balances, not actual cash spending or a2026 forecast; timing/reconciliation remains unresolved.",
+        "2026-11-14 rechecked cached interim printedp63 note21: capital commitments at30Jun2026 were RMB23,719m, property3,279m plus network plant/equipment20,440m; comparative31Dec2025 is16,771m, matching the annual note. Net balance change+6,948m is not gross new contracts, cash spent or a payment forecast.",
         "2026-11-04 original interim report pp48/49: CFO RMB61.375bn, cash CAPEX26.354bn, lease-principal financing outflow3.915bn, cash dividends paid7.105bn; accounts-payable cash effect4.686bn versus priorH1 -8.592bn."
       ],
       "inferences": [
@@ -406,10 +407,29 @@
         "original intraday publication times, older declaration dates and complete intermediate version chain; FY2025 final initial date now verified",
         "older HKD settlement conversions, remaining older/2026 interim payments and investor-level receipt/tax",
         "management/cash CAPEX bridge and lease treatment",
-        "working-capital sustainability, debt and full-year downside coverage; reconcile historical year-end capital commitments with2026 cash payments and management/cash CAPEX"
+        "working-capital sustainability, debt and full-year downside coverage; year-end/June capital commitment balances verified but additions, fulfilments, cancellations, other changes and dated cash/CAPEX bridge unresolved"
       ],
       "coverage_review": {
         "status": "partial_historical_evidence_not_approved",
+        "interim_capital_commitment_context": {
+          "verified_on": "2026-11-14",
+          "source": "ct26_ir",
+          "printed_page": 63,
+          "note": 21,
+          "balance_date": "2026-06-30",
+          "comparison_date": "2025-12-31",
+          "currency_unit": "CNY_million",
+          "basis": "contracted_for_but_not_provided_capital_commitments",
+          "property_2026H1": 3279,
+          "network_plant_equipment_2026H1": 20440,
+          "total_2026H1": 23719,
+          "property_2025": 2193,
+          "network_plant_equipment_2025": 14578,
+          "total_2025": 16771,
+          "net_balance_change": 6948,
+          "comparative_agrees_with_annual_source": "ct25_notes",
+          "limit": "Balance change is not gross new contracts, cash spending or a future payment schedule. Additions, fulfilments, cancellations, other/FX changes and overlap with cash/management CAPEX remain unknown. Not a current November balance, dividend payment confirmation or safety approval."
+        },
         "historical_capital_commitment_context": {
           "verified_on": "2026-11-13",
           "source": "ct25_notes",
@@ -2354,9 +2374,20 @@
       "new_original_pages": [218],
       "candidate_reviews_updated": ["728.HK"],
       "interpretation": "Newly verified historical note39 capital-commitment context on a cached primary PDF. Rechecked note37 does not confirm FY2024 interim payment; event status stays unchanged. Do not add contracted-for balances to2026 cash CAPEX or infer distributable cash from the comparative decline. Safety/history/backtest gaps remain."
+    },
+    {
+      "date": "2026-11-14",
+      "new_source_ids": [],
+      "new_event_ids": [],
+      "revised_event_ids": [],
+      "rechecked_source": "ct26_ir",
+      "rechecked_original_pages": [63],
+      "new_table_reconciliation": "note21 capital commitments at30Jun2026 versus31Dec2025; comparative matches ct25_notes printed218",
+      "candidate_reviews_updated": ["728.HK"],
+      "interpretation": "Previously reviewed page reused for a new table/balance reconciliation, not a newly discovered source/page. Net contracted-balance growth6,948m is not cash paid or gross additions; safety and old payment gaps remain."
     }
   ],
-  "last_research_update": "2026-11-13",
+  "last_research_update": "2026-11-14",
   "source_date_policy": "Initial source collection date retained; see per-source last_reverified_date for selective later checks.",
   "illustrative_quote_snapshot_as_of": "2026-10-30"
 }
