@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-14 Asia/Shanghai",
+  "as_of": "2026-11-15 Asia/Shanghai",
   "scope": "Dividend research evidence only. No broker orders, credentials, operational API calls or performance claims.",
   "source_retrieved_date": "2026-11-01",
   "universe": {
@@ -225,7 +225,7 @@
     "ct26_ir": {
       "url": "https://www.chinatelecom-h.com/en/ir/report/interim2026.pdf",
       "kind": "issuer_interim_report",
-      "read": "original_pdf_relevant_pages_text_and_cashflow_note19_note21_tables_visually_checked",
+      "read": "original_pdf_relevant_pages_text_and_cashflow_note5_note19_note21_visually_checked",
       "first_seen_date": "2026-11-03",
       "reporting_period_end": "2026-06-30",
       "pages": [
@@ -233,10 +233,11 @@
         9,
         48,
         49,
+        53,
         63
       ],
-      "limit": "Relevant original pages verified; publication timestamp, full management/cash-CAPEX bridge and capital-commitment cash-flow roll-forward remain unresolved. Contracted balances are not actual payments or incremental cash forecasts.",
-      "last_reverified_date": "2026-11-14",
+      "limit": "Relevant original pages verified; publication timestamp, management/acquired-cost/cash-CAPEX bridge and capital-commitment cash-flow roll-forward unresolved. Acquired asset cost is not cash payment. Contracted balances are not actual payments or incremental cash forecasts.",
+      "last_reverified_date": "2026-11-15",
       "sha256_on_retrieval": "354b086e932232289c31aed607c0f193b7ff383c42b514d7abf5fcc1f79dbfcf"
     },
     "ccb26_h1_release": {
@@ -370,6 +371,7 @@
         "2026-11-12 visually verified original20Aug2024 ordinary interim form: CNY0.1671, HKD0.182289 at stated RMB1:HKD1.090898, ex3Sep/record10Sep/scheduled payment18Oct2024. Original announcement date and FX now verified; board/publication timestamp/payment confirmation remain separate and incomplete.",
         "2026-11-13 verified cached FY2025 original note39 printedp218: contracted-for/not-provided capital commitments at31Dec2025 were RMB16,771m (property2,193m plus network plant/equipment14,578m), versus20,226m at31Dec2024. These are historical stock balances, not actual cash spending or a2026 forecast; timing/reconciliation remains unresolved.",
         "2026-11-14 rechecked cached interim printedp63 note21: capital commitments at30Jun2026 were RMB23,719m, property3,279m plus network plant/equipment20,440m; comparative31Dec2025 is16,771m, matching the annual note. Net balance change+6,948m is not gross new contracts, cash spent or a payment forecast.",
+        "2026-11-15 verified cached interim printedp53 note5: H1 acquired PPE/construction-in-progress aggregate cost RMB32,003m versus33,615m priorH1; depreciation38,884m versus39,306m. Acquired cost differs from cash CAPEX26,354m by5,649m and approximate management CAPEX32,400m by397m; arithmetic gaps, not an explained cash bridge or distributable funds.",
         "2026-11-04 original interim report pp48/49: CFO RMB61.375bn, cash CAPEX26.354bn, lease-principal financing outflow3.915bn, cash dividends paid7.105bn; accounts-payable cash effect4.686bn versus priorH1 -8.592bn."
       ],
       "inferences": [
@@ -411,6 +413,24 @@
       ],
       "coverage_review": {
         "status": "partial_historical_evidence_not_approved",
+        "asset_cost_cash_reconciliation": {
+          "verified_on": "2026-11-15",
+          "source": "ct26_ir",
+          "printed_page": 53,
+          "note": 5,
+          "period": "2026H1 with2025H1 acquired-cost/depreciation comparatives",
+          "currency_unit": "CNY_million",
+          "acquired_PPE_CIP_cost_2026H1": 32003,
+          "acquired_PPE_CIP_cost_2025H1": 33615,
+          "depreciation_2026H1": 38884,
+          "depreciation_2025H1": 39306,
+          "cash_CAPEX_2026H1": 26354,
+          "approx_management_CAPEX_2026H1": 32400,
+          "acquired_cost_minus_cash_CAPEX": 5649,
+          "approx_management_CAPEX_minus_acquired_cost": 397,
+          "not_a_reconciled_cash_bridge": true,
+          "limit": "Asset cost, cash payment and management CAPEX are different measures. Do not assign gaps to payables,noncash additions,FX or financing without evidence, treat them as free cash, or mix depreciation/contract balances into cash CAPEX. Dividend safety remains unapproved."
+        },
         "interim_capital_commitment_context": {
           "verified_on": "2026-11-14",
           "source": "ct26_ir",
@@ -2385,9 +2405,19 @@
       "new_table_reconciliation": "note21 capital commitments at30Jun2026 versus31Dec2025; comparative matches ct25_notes printed218",
       "candidate_reviews_updated": ["728.HK"],
       "interpretation": "Previously reviewed page reused for a new table/balance reconciliation, not a newly discovered source/page. Net contracted-balance growth6,948m is not cash paid or gross additions; safety and old payment gaps remain."
+    },
+    {
+      "date": "2026-11-15",
+      "new_source_ids": [],
+      "new_event_ids": [],
+      "revised_event_ids": [],
+      "rechecked_source": "ct26_ir",
+      "new_original_pages": [53],
+      "candidate_reviews_updated": ["728.HK"],
+      "interpretation": "Original note5 acquired-asset cost/depreciation now verified and compared arithmetically with cash/management CAPEX. Gaps remain unexplained, not free cash or a dividend coverage approval. External announcement search unavailable this run; no new payment evidence claimed."
     }
   ],
-  "last_research_update": "2026-11-14",
+  "last_research_update": "2026-11-15",
   "source_date_policy": "Initial source collection date retained; see per-source last_reverified_date for selective later checks.",
   "illustrative_quote_snapshot_as_of": "2026-10-30"
 }
