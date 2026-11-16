@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-15 Asia/Shanghai",
+  "as_of": "2026-11-16 Asia/Shanghai",
   "scope": "Dividend research evidence only. No broker orders, credentials, operational API calls or performance claims.",
   "source_retrieved_date": "2026-11-01",
   "universe": {
@@ -225,7 +225,7 @@
     "ct26_ir": {
       "url": "https://www.chinatelecom-h.com/en/ir/report/interim2026.pdf",
       "kind": "issuer_interim_report",
-      "read": "original_pdf_relevant_pages_text_and_cashflow_note5_note19_note21_visually_checked",
+      "read": "original_pdf_relevant_pages_text_and_cashflow_note5_note11_note19_note21_visually_checked",
       "first_seen_date": "2026-11-03",
       "reporting_period_end": "2026-06-30",
       "pages": [
@@ -234,10 +234,11 @@
         48,
         49,
         53,
+        57,
         63
       ],
       "limit": "Relevant original pages verified; publication timestamp, management/acquired-cost/cash-CAPEX bridge and capital-commitment cash-flow roll-forward unresolved. Acquired asset cost is not cash payment. Contracted balances are not actual payments or incremental cash forecasts.",
-      "last_reverified_date": "2026-11-15",
+      "last_reverified_date": "2026-11-16",
       "sha256_on_retrieval": "354b086e932232289c31aed607c0f193b7ff383c42b514d7abf5fcc1f79dbfcf"
     },
     "ccb26_h1_release": {
@@ -372,6 +373,7 @@
         "2026-11-13 verified cached FY2025 original note39 printedp218: contracted-for/not-provided capital commitments at31Dec2025 were RMB16,771m (property2,193m plus network plant/equipment14,578m), versus20,226m at31Dec2024. These are historical stock balances, not actual cash spending or a2026 forecast; timing/reconciliation remains unresolved.",
         "2026-11-14 rechecked cached interim printedp63 note21: capital commitments at30Jun2026 were RMB23,719m, property3,279m plus network plant/equipment20,440m; comparative31Dec2025 is16,771m, matching the annual note. Net balance change+6,948m is not gross new contracts, cash spent or a payment forecast.",
         "2026-11-15 verified cached interim printedp53 note5: H1 acquired PPE/construction-in-progress aggregate cost RMB32,003m versus33,615m priorH1; depreciation38,884m versus39,306m. Acquired cost differs from cash CAPEX26,354m by5,649m and approximate management CAPEX32,400m by397m; arithmetic gaps, not an explained cash bridge or distributable funds.",
+        "2026-11-16 verified cached interim printedp57 note11: accounts payable RMB156,456m at30Jun2026 versus149,704m at31Dec2025, net+6,752m. Breakdown is by counterparties and bill-date age, not capital-versus-operating use. Do not equate this total balance change with the5,649m acquired-cost/cash-CAPEX gap or operating cash-flow payable effect.",
         "2026-11-04 original interim report pp48/49: CFO RMB61.375bn, cash CAPEX26.354bn, lease-principal financing outflow3.915bn, cash dividends paid7.105bn; accounts-payable cash effect4.686bn versus priorH1 -8.592bn."
       ],
       "inferences": [
@@ -413,6 +415,32 @@
       ],
       "coverage_review": {
         "status": "partial_historical_evidence_not_approved",
+        "accounts_payable_context": {
+          "verified_on": "2026-11-16",
+          "source": "ct26_ir",
+          "printed_page": 57,
+          "note": 11,
+          "balance_date": "2026-06-30",
+          "comparison_date": "2025-12-31",
+          "currency_unit": "CNY_million",
+          "third_parties_2026H1": 111344,
+          "china_telecom_group_2026H1": 31776,
+          "china_tower_2026H1": 11148,
+          "other_operators_2026H1": 2188,
+          "total_2026H1": 156456,
+          "third_parties_2025": 109536,
+          "china_telecom_group_2025": 28512,
+          "china_tower_2025": 10157,
+          "other_operators_2025": 1499,
+          "total_2025": 149704,
+          "net_balance_change": 6752,
+          "bill_age_within_one_year_2026H1": 124002,
+          "bill_age_over_one_year_2026H1": 32454,
+          "bill_age_within_one_year_2025": 120847,
+          "bill_age_over_one_year_2025": 28857,
+          "capital_operating_split_verified": false,
+          "limit": "This page breaks down total payables by counterparty and bill-date age, not spending purpose. Age over1year is not automatically overdue. Do not assign total change6752m to capital purchases, substitute it for cash-flow adjustments or close the5649m cost/cash gap without a purpose/timing/noncash bridge."
+        },
         "asset_cost_cash_reconciliation": {
           "verified_on": "2026-11-15",
           "source": "ct26_ir",
@@ -2415,9 +2443,19 @@
       "new_original_pages": [53],
       "candidate_reviews_updated": ["728.HK"],
       "interpretation": "Original note5 acquired-asset cost/depreciation now verified and compared arithmetically with cash/management CAPEX. Gaps remain unexplained, not free cash or a dividend coverage approval. External announcement search unavailable this run; no new payment evidence claimed."
+    },
+    {
+      "date": "2026-11-16",
+      "new_source_ids": [],
+      "new_event_ids": [],
+      "revised_event_ids": [],
+      "rechecked_source": "ct26_ir",
+      "new_original_pages": [57],
+      "candidate_reviews_updated": ["728.HK"],
+      "interpretation": "Original accounts-payable counterparties and bill-date ageing verified. Total balance growth does not establish capital-payable growth or explain the acquired-cost/cash-CAPEX difference; full cash bridge and dividend safety remain incomplete."
     }
   ],
-  "last_research_update": "2026-11-15",
+  "last_research_update": "2026-11-16",
   "source_date_policy": "Initial source collection date retained; see per-source last_reverified_date for selective later checks.",
   "illustrative_quote_snapshot_as_of": "2026-10-30"
 }
