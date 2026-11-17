@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-16 Asia/Shanghai",
+  "as_of": "2026-11-17 Asia/Shanghai",
   "scope": "Dividend research evidence only. No broker orders, credentials, operational API calls or performance claims.",
   "source_retrieved_date": "2026-11-01",
   "universe": {
@@ -181,6 +181,37 @@
       "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000044/realtyincomeq22026supple.htm",
       "kind": "issuer_SEC_supplement",
       "read": "full_text"
+    },
+    "o26_nov_release": {
+      "url": "https://www.realtyincome.com/investors/press-releases/137th-common-stock-monthly-dividend-increase-declared-realty-income",
+      "kind": "issuer_dividend_release",
+      "read": "full_original_issuer_HTML_text",
+      "publication_date": "2026-11-10",
+      "first_seen_date": "2026-11-17",
+      "sha256": "1f20e922dbc1f9a2e2ff41c444520d21b84c7c7196bdc43cfcf956247a314e82",
+      "limit": "Common monthly dividend declared USD0.274; record/payment are future schedules. Ex-date, intraday publication time and tax-character allocation unverified. Annualized3.288 is an indicated run rate, not a fiscal-year paid total."
+    },
+    "o26_q3_supplement": {
+      "url": "https://www.realtyincome.com/sites/realty-income/files/2026-11/realty-income-earnings-release-and-supplemental-information-q3-2026-v2.pdf",
+      "kind": "issuer_earnings_release_and_supplement",
+      "read": "relevant_original_PDF_pages_complete_text_and_visual_checked",
+      "publication_date": "2026-11-02",
+      "first_seen_date": "2026-11-17",
+      "reporting_period_end": "2026-09-30",
+      "PDF_pages_checked": [
+        3,
+        12,
+        17,
+        50
+      ],
+      "printed_pages_checked": [
+        2,
+        11,
+        16,
+        32
+      ],
+      "sha256": "e7e769e258ea5a8925a6abb07860ebd1fc40df97cc908da4ab7f3e4c8256590b",
+      "limit": "Partial relevant-page review. AFFO is non-GAAP operating performance, not liquidity or ability to pay dividends. Liquidity includes credit facilities and unsettled ATM forwards; debt maturities, tenant stress and complete cash-flow bridge remain unverified."
     },
     "vz": {
       "url": "https://www.verizon.com/about/investors/dividend-history",
@@ -1101,32 +1132,134 @@
       "group": "reit",
       "quote_currency": "USD",
       "ordinary_dps": {
-        "amount": 3.258,
+        "amount": 3.288,
         "currency": "USD",
-        "method": "latest_monthly_regular0.2715_times12_indicated"
+        "method": "latest_monthly_regular0.2740_times12_indicated_declared2026_11_10"
       },
       "sources": [
         "o_event",
-        "o_cov"
+        "o_cov",
+        "o26_nov_release",
+        "o26_q3_supplement"
       ],
       "quality_decision": "research_only_coverage_and_history_incomplete",
       "confirmed_facts": [
         "2026-10-13 declares common monthly0.2715, issuer annualized3.258; record2026-10-30, payment2026-11-13.",
         "H12026 dividend1.6215/AFFO2.22; issuer reports AFFO payout73.0% in Q2 supplement.",
-        "2026-06-30 net debt/annualized pro-forma adjusted EBITDAre5.4x before unsettled ATM equity adjustment."
+        "2026-06-30 net debt/annualized pro-forma adjusted EBITDAre5.4x before unsettled ATM equity adjustment.",
+        "2026-11-10 original issuer release increases monthly common dividend from0.2715 to0.2740 USD; indicated annual run rate3.288, record2026-11-30 and scheduled payment2026-12-15. No ex-date or payment confirmation inferred.",
+        "2026Q3 paid DPS0.813/diluted AFFO1.12: issuer72.6%; nine-month paid2.4345/AFFO3.35: issuer72.7%. These are period-matched historical observations, not coverage of the later raised dividend.",
+        "Q3 common AFFO1061097 less common distributions768505 equals292592 USD thousand; nine-month3140770 less2283316 equals857454. Neither AFFO residual is certified unrestricted cash.",
+        "Sep30 pro-rata liquidity5390.3m comprises cash355.8 + available credit5485.1 + unsettled ATM1090.1 - CP1540.7 USDm. Pro-rata debt32004.1m. Available facilities and unsettled ATM are not cash on hand.",
+        "Original glossary explicitly says FFO/AFFO should not be considered measures of liquidity, ability to make cash distributions or pay interest."
       ],
       "inferences": [
         "At supplied USD56.93 close, indicated gross yield5.7228%; rate*12 is forward indication, not12 already-paid dividends.",
-        "AFFO is more relevant than GAAP EPS for REIT cash coverage; definition/reconciliation and debt refinancing still matter."
+        "AFFO is more relevant than GAAP EPS for REIT cash coverage; definition/reconciliation and debt refinancing still matter.",
+        "The older supplied-price yield snapshot is historical. Latest run rate must use the new declaration with an unadjusted same-currency quote; raising a dividend and historical AFFO coverage alone do not establish safety or expected total return."
       ],
       "event_ids": [
-        "o26_oct"
+        "o26_oct",
+        "o26_nov"
       ],
       "missing": [
-        "full monthly declaration history and explicit ex dates",
+        "full monthly declaration/version history and exchange-confirmed ex dates",
         "REIT ordinary-income/capital-gain/return-of-capital tax classifications",
-        "tenant/lease concentration and latest AFFO review"
-      ]
+        "tenant concentration, debt maturity/refinancing stress and a complete cash-flow bridge beyond partial AFFO reconciliation",
+        "future settlement/payment confirmation and intraday publication time"
+      ],
+      "coverage_review": {
+        "status": "partial_period_matched_AFFO_evidence_not_safety_approved",
+        "verified_on": "2026-11-17",
+        "source": "o26_q3_supplement",
+        "release_date": "2026-11-02",
+        "reporting_period_end": "2026-09-30",
+        "pages_visually_checked_PDF": [
+          3,
+          12,
+          17,
+          50
+        ],
+        "pages_printed": [
+          2,
+          11,
+          16,
+          32
+        ],
+        "unit": "USD_thousand_except_per_share_and_liquidity_million",
+        "Q3": {
+          "AFFO_common": 1061097,
+          "AFFO_diluted": 1063491,
+          "AFFO_per_diluted_share": 1.12,
+          "distributions_common": 768505,
+          "dividend_paid_per_share": 0.813,
+          "issuer_payout_pct": 72.6,
+          "per_share_payout_ratio": 0.725892857142857,
+          "aggregate_payout_ratio": 0.7242551811945562,
+          "AFFO_after_distributions": 292592,
+          "normalized_FFO_common": 1043720,
+          "AFFO_adjustments_ordered": [
+            21656,
+            1531,
+            -2392,
+            -27,
+            14212,
+            6461,
+            -50732,
+            17742,
+            0,
+            1473,
+            4202,
+            2230,
+            -987,
+            2008
+          ]
+        },
+        "nine_months": {
+          "AFFO_common": 3140770,
+          "AFFO_diluted": 3147936,
+          "AFFO_per_diluted_share": 3.35,
+          "distributions_common": 2283316,
+          "dividend_paid_per_share": 2.4345,
+          "issuer_payout_pct": 72.7,
+          "per_share_payout_ratio": 0.7267164179104477,
+          "aggregate_payout_ratio": 0.7269924254243386,
+          "AFFO_after_distributions": 857454,
+          "normalized_FFO_common": 3046766,
+          "AFFO_adjustments_ordered": [
+            54133,
+            4592,
+            -5690,
+            -197,
+            60573,
+            27112,
+            -129778,
+            48505,
+            1718,
+            3319,
+            22157,
+            5798,
+            -1761,
+            3523
+          ]
+        },
+        "liquidity_USD_million": {
+          "pro_rata_cash": 355.8,
+          "credit_facilities_available": 5485.1,
+          "unsettled_ATM_forwards": 1090.1,
+          "commercial_paper_deduction": 1540.7,
+          "reported_liquidity": 5390.3,
+          "cash_excludes_undrawn_credit_and_unsettled_ATM": true
+        },
+        "pro_rata_debt_USD_million": 32004.1,
+        "safety_approved": false,
+        "limits": [
+          "AFFO is a non-GAAP performance measure, not liquidity or ability to pay distributions; the issuer glossary explicitly cautions against those substitutions.",
+          "Aggregate distributions/common AFFO and dividends per share/diluted AFFO per share have different denominators and rounding; do not silently equate them.",
+          "The AFFO residual is not unrestricted cash or a completed debt/maturity/tenant stress test. Available credit and unsettled ATM are not cash on hand.",
+          "No reliable expected total return or dividend strategy backtest; no new event is promoted from scheduled to paid."
+        ]
+      }
     },
     {
       "symbol": "VZ.US",
@@ -1674,6 +1807,25 @@
       "payment_date": "2026-11-13",
       "status": "declared",
       "source": "o_event"
+    },
+    {
+      "id": "o26_nov",
+      "amount": 0.274,
+      "currency": "USD",
+      "unit": "per_ordinary_share_gross",
+      "fiscal_year_end": "2026-12-31",
+      "fiscal_attribution_limit": "Monthly common dividend; announcement date/run rate does not establish an earnings-year distribution total.",
+      "period": "monthly",
+      "nature": "ordinary",
+      "announcement_date": "2026-11-10",
+      "publication_time": null,
+      "approval_date": null,
+      "ex_date": null,
+      "record_date": "2026-11-30",
+      "payment_date": "2026-12-15",
+      "status": "declared",
+      "payment_status": "scheduled_not_confirmed",
+      "source": "o26_nov_release"
     },
     {
       "id": "vz26_sep",
@@ -2453,9 +2605,24 @@
       "new_original_pages": [57],
       "candidate_reviews_updated": ["728.HK"],
       "interpretation": "Original accounts-payable counterparties and bill-date ageing verified. Total balance growth does not establish capital-payable growth or explain the acquired-cost/cash-CAPEX difference; full cash bridge and dividend safety remain incomplete."
+    },
+    {
+      "date": "2026-11-17",
+      "new_source_ids": [
+        "o26_nov_release",
+        "o26_q3_supplement"
+      ],
+      "new_event_ids": [
+        "o26_nov"
+      ],
+      "revised_event_ids": [],
+      "candidate_reviews_updated": [
+        "O.US"
+      ],
+      "interpretation": "Current monthly indication updated to3.288 USD from a new declaration, with future payment still scheduled. Q3/9m AFFO bridges and liquidity components checked; no safety or dividend-return backtest approval. Original events preserved, no later information backfilled."
     }
   ],
-  "last_research_update": "2026-11-16",
+  "last_research_update": "2026-11-17",
   "source_date_policy": "Initial source collection date retained; see per-source last_reverified_date for selective later checks.",
   "illustrative_quote_snapshot_as_of": "2026-10-30"
 }
